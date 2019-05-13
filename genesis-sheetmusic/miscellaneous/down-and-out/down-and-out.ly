@@ -8,17 +8,16 @@
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
 synthStringIntro = \relative c''' {
-  <b>2.~            <b>2~
-  <b>2.~            <b>2~
+               <b>1~
+               <b>1~
 
-  <e, g b>1~        <b'>4~
-  <cis, e g b>1~    <b'>4~
-  <d, fis gis b>1~  <b'>4~
-  <b, d fis b>1~    <b'>4~
+  \time 6/4    <e, g b>1~          <b'>2~
+               <cis, e g b>1~      <b'>2~
+               <d, fis gis b>1~    <b'>2~
+               <b, d fis b>1~      <b'>2~
 
-  <e, g b>1~        <b'>4~
-  \time 3/4
-  <cis, e g b>2.
+  \time 5/4    <e, g b>1~          <b'>4~
+  \time 4/4    <cis, e g b>1
 
   \break
 
@@ -37,17 +36,16 @@ synthStringIntro = \relative c''' {
 }
 
 synthArcIntro = \relative c''' {
-  r2. r2
-  r2. r2
+               r1
+               r1
 
-  r2. r2
-  r2. r2
-  r2. r2
-  r2. r2
+  \time 6/4    r1                  r2
+               r1                  r2
+               r1                  r2
+               r1                  r2
 
-  r2. r2
-  \time 3/4
-  <cis, e>2.
+  \time 5/4    r1                  r4
+  \time 4/4    r2 <cis, e>2
 
   \break
 
@@ -66,17 +64,16 @@ synthArcIntro = \relative c''' {
 }
 
 organIntro = \relative c' {
-  r2. r2
-  r2. r2
+               r1
+               r1
 
-  r2. r2
-  r2. r2
-  r2. r2
-  r2. r2
+  \time 6/4    r1                  r2
+               r1                  r2
+               r1                  r2
+               r1                  r2
 
-  r2. r2
-  \time 3/4
-  r2.
+  \time 5/4    r1                  r4
+  \time 4/4    r1
 
   \break
 
@@ -101,38 +98,63 @@ organIntro = \relative c' {
 synthStringBridgeIntroTema = \relative c' {
   r4 r1
   r4. r4 r4 r4 r8
-
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
-
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
 }
 
 synthArcBridgeIntroTema = \relative c' {
   <e a cis>4 r1
-  r4. r4 r4 r4 r8
-
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
-
-  r4. r4 r4 r4 r8
   r4. r4 r4 r4 r8
 }
 
 organBridgeIntroTema = \relative c' {
   <e a cis>4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r8 <a cis e>16 r16
   <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r8 <g b d>16 r16
+}
+% -----------------------------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------------------
+%                                                      TEMA A
+% -----------------------------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------------------
+synthTemaA = \relative c' {
+  r4. r4 r4 r4 r8
+  r4. r4 r4 r4 r8
 
+  r4. r4 r4 r4 r8
+  r4. r4 r4 r4 r8
+}
+
+organTemaA = \relative c' {
   <f a d>4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r8 <a cis e>16 r16
   <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r8 <g b d>16 r16
   
   <f a d>4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r8 <a cis e>16 r16
   <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r8 <g b d>16 r16
 }
+
+synthTemaAbis = \relative c' {
+  r4. r4 r4 r4 r8
+  r4. r4 r4 r4 r8
+
+  r4. r4 r4 r4 r8
+  r4. r4 r4 r4 r8
+
+  r4. r4 r4 r4 r8
+  r4. r4 r4 r4 r8
+}
+
+organTemaAbis = \relative c'' {
+  \time 5/4
+  r4. <a c f>8 r8 <g c e>8 r8 <a d f>8 r8 <a cis e>16 r16
+  <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r8 <g b d>16 r16
+  
+  <f a d>4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r8 <a cis e>16 r16
+  <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r8 <g b d>16 r16
+
+  <f a d>4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r8 <a cis e>16 r16
+  <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r8 <g b d>16 r16
+}
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
-%                                                      TEMA
+%                                                      TEMA B
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
 synthTemaB = \relative c' {
@@ -146,6 +168,17 @@ synthTemaB = \relative c' {
   r4. r4 r4 r4 r8
 }
 
+synthSoloistTemaB = \relative c' {
+  r4.   d4   fis4  a4   c8
+  b4.   g4   b4    d4   f8
+  e4.   c4   e4    g4   bes8
+  a4.   f,4  a4    c4   ees8
+  d4.   d,4  fis4  a4   c8
+  bes4. g4   bes4  d4   f8
+  ees4. c4   ees4  g4   bes8
+  a4.   a,4  cis4  e4   g8
+}
+
 organTemaB = \relative c' {
   <fis a d>1~       <fis a d>4~
   <g b d>1~         <g b d>4~
@@ -153,8 +186,42 @@ organTemaB = \relative c' {
   <f a c>1~         <f a c>4~
   <fis a d>1~       <fis a d>4~
   <g bes d>1~       <g bes d>4~
-  <g c ees>1~       <g c ees>4~
+  <g c ees>1~       <g c ees>4
   <a cis e>1~       <a cis e>4
+}
+% -----------------------------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------------------
+%                                                      TEMA C
+% -----------------------------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------------------
+synthTemaC = \relative c' {
+  \time 4/4
+  r1
+  r1
+
+  r1
+  r1
+
+  r1
+  r1
+
+  r1
+  r1
+}
+
+organTemaC = \relative c' {
+  \time 4/4
+  r4           <fis a d>8 <fis a d>8      <fis a d>4.  <e g c>8~
+  <e g c>1
+
+  r4           <fis a d>8 <fis a d>8      <fis a d>4 <fis a d>8  <e g c>8~
+  <e g c>1
+
+  r4           <a cis e>8 <a cis e>8      <a cis e>4 <a cis e>8  <g b d e>8~
+  <g b d e>1
+
+  r4           <a cis e>8 <a cis e>8      <a cis e>4 <a cis e>8  <g b d e>8~
+  <g b d e>4.                             <g c e>4   <fis a d>4  r8
 }
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
@@ -177,28 +244,34 @@ synthFinale = \relative c'' {
 synthOnePart = {
     \clef violin
 
-    \time 5/4
-
     % INTRO
-    r2. r2 ^\markup { \tiny {string ensemble} }
+    \time 4/4 r1 ^\markup { \tiny {string ensemble} }
     \bar "||"
     \synthStringIntro
-    \break
 
     % BRIDGE INTRO-TEMA
 	\synthStringBridgeIntroTema
+	\break
 
+    % TEMA A + B
+	\repeat volta 2 {
+	    \synthTemaA
+	    \break
+	    \synthSoloistTemaB
+	}
+	\break
 
-    % TEMA B
-	\synthTemaB
+    % TEMA C
+	\repeat volta 2 \synthTemaC
+	\break
 
+	% TEMA A + B
+	\synthTemaAbis
+	\synthSoloistTemaB
 
-    % RITORNELLO
+    % SOLO
 
-
-    % TEMA
-
-
+    % TEMA C
 
     % FINALE
 
@@ -209,27 +282,34 @@ synthOnePart = {
 synthTwoPart = {
     \clef violin
 
-    \time 5/4
-
     % INTRO
-    r2. r2 ^\markup { \tiny {string ensemble} }
+    \time 4/4 r1 ^\markup { \tiny {string ensemble} }
     \bar "||"
     \synthArcIntro
-    \break
 
 	% BRIDGE INTRO-TEMA
 	\synthArcBridgeIntroTema
+    \break
 
-    % TEMA B
+    % TEMA A + B
+	\repeat volta 2 {
+	    \synthTemaA
+	    \break
+	    \synthTemaB
+	}
+	\break
+
+    % TEMA C
+	\repeat volta 2 \synthTemaC
+	\break
+
+	% TEMA A + B
+	\synthTemaAbis
 	\synthTemaB
 
+    % SOLO
 
-    % RITORNELLO
-
-
-    % TEMA
-
-
+    % TEMA C
 
     % FINALE
 
@@ -240,27 +320,34 @@ synthTwoPart = {
 organPart = {
     \clef violin
 
-    \time 5/4
-
     % INTRO
-    r2. r2 ^\markup { \tiny {(86.8808.000)} }
+    \time 4/4 r1 ^\markup { \tiny {(86.8808.000)} }
     \bar "||"
 	\organIntro
-    \break
 
 	% BRIDGE INTRO-TEMA
 	\organBridgeIntroTema
+    \break
 
-    % TEMA B
+	% TEMA A + B
+	\repeat volta 2 {
+	    \organTemaA
+	    \break
+	    \organTemaB
+	}
+	\break
+
+    % TEMA C
+	\repeat volta 2 \organTemaC
+	\break
+
+	% TEMA A + B
+	\organTemaAbis
 	\organTemaB
 
+    % SOLO
 
-    % RITORNELLO
-
-
-    % TEMA
-
-
+    % TEMA C
 
     % FINALE
 
@@ -295,7 +382,7 @@ organPart = {
             \set Staff.instrumentName = \markup { "Synth" }
             \synthOnePart
         >>
-        \new Staff = "Synth" \with { midiInstrument = #"string ensemble 1" }
+        \new Staff = "Synth" \with { midiInstrument = #"synthstrings 1" }
         <<
             \set Staff.instrumentName = \markup { "Synth" }
             \synthTwoPart
