@@ -196,45 +196,152 @@ organTemaB = \relative c' {
 % -----------------------------------------------------------------------------------------------------------------------
 synthTemaC = \relative c' {
   \time 4/4
-  r1
-  r1
-
-  r1
-  r1
-
-  r1
+  r1  r1  r1  r1
+  r2.. fis8~
+  fis4 e4 b'4 a4
+  cis2. r4
   r1
 
-  r1
+  r1  r1  r1  r1
+  r1  r1  r1  r1
+}
+
+synthArcTemaC = \relative c' {
+  \time 4/4
+  r1  r1  r1  r1
+  r1  r1  r1  r1
+
+  r1  r1  r1  r1
+  r2.. <fis a>8~
+  <fis a>4 <e g>4 <b' d>4 <a cis>4
+  <cis e>2. r4
   r1
 }
 
 organTemaC = \relative c' {
   \time 4/4
-  r4           <fis a d>8 <fis a d>8      <fis a d>4.  <e g c>8~
-  <e g c>1
-
-  r4           <fis a d>8 <fis a d>8      <fis a d>4 <fis a d>8  <e g c>8~
-  <e g c>1
-
+  r4           <fis a d>8 <fis a d>8      <fis a d>4.  <g c e>8~
+  <g c e>1
+  r4           <fis a d>8 <fis a d>8      <fis a d>4 <fis a d>8  <g c e>8~
+  <g c e>1
   r4           <a cis e>8 <a cis e>8      <a cis e>4 <a cis e>8  <g b d e>8~
   <g b d e>1
+  r4           <a cis e>8 <a cis e>8      <a cis e>4 <a cis e>8  <g b d e>8~
+  <g b d e>4.                             <g c e>4   <fis a d>4  r8
 
+
+  r4           <fis a d>8 <fis a d>8      <fis a d>4 <fis a d>8 <g c e>8~
+  <g c e>1
+  r4           <fis a d>8 <fis a d>8      <fis a d>4 <fis a d>8  <g c e>8~
+  <g c e>1
+  r4           <a cis e>8 <a cis e>8      <a cis e>4 <a cis e>8  <g b d e>8~
+  <g b d e>1
   r4           <a cis e>8 <a cis e>8      <a cis e>4 <a cis e>8  <g b d e>8~
   <g b d e>4.                             <g c e>4   <fis a d>4  r8
 }
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
-%                                                      PARTS
+%                                                      SOLO
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
-synthFinale = \relative c'' {
-  b2    a
-  g \tuplet 3/2 { d4 c b }
-
-  g1 \fermata
+synthSolo = \relative c' {
+  r4. r4 r4 r4 r8
 }
 
+synthSoloistSolo = \relative c' {
+  r4. r4 r4 r4 r8
+}
+
+organSolo = \relative c' {
+  r4. r4 r4 r4 r8
+}
+XsynthSoloistSolo = \relative c' {
+  cis16 a  e d			cis d e d		cis a fis g		a bes c bes		a g fis c~
+  c d ees f             a8  g8          bes8 a c bes    a g f
+  
+}
+% -----------------------------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------------------
+%                                                      CODA
+% -----------------------------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------------------
+synthCoda = \relative c' {
+  \time 4/4
+  r1
+  r1
+  r1
+  r1
+
+  r1
+  r1
+}
+
+synthArcCoda = \relative c' {
+  \time 4/4
+  <g' b e>2..    <a cis e>8~
+  <a cis e>1
+  <fis b d>1~
+  <fis b d>1
+
+  <g b e>2..    <a cis e>8~
+  <a cis e>1
+}
+
+organCoda = \relative c' {
+  \time 4/4
+  <g' b e>2..    <a cis e>8~
+  <a cis e>1
+  <fis b d>1~
+  <fis b d>1
+
+  <g b e>2..    <a cis e>8~
+  <a cis e>1
+}
+% -----------------------------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------------------
+%                                                      FINALE
+% -----------------------------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------------------
+synthFinale = \relative c' {
+  \time 3/4
+  r2.
+  \time 4/4
+  r1 r1 r1 
+  r1 r1 r1 r1
+  r1 \fermata
+}
+
+synthArcFinale = \relative c' {
+  \time 3/4
+  <ees ees'>2.~
+  \time 4/4
+  <ees ees'>1~
+  <ees ees'>1~
+  <ees ees'>2.   <fis fis'>4
+
+  <gis gis'>1~
+  <gis gis'>1~
+  <gis gis'>1~
+  <gis gis'>2.   <fis fis'>4
+
+  <b b'>1 \fermata
+}
+
+organFinale = \relative c' {
+  \time 3/4
+  <fis b dis>2.~
+  \time 4/4
+  <fis ais cis dis>1~
+  <e gis b dis>1~
+  <fis ais cis dis>1~
+
+  <fis b dis>1~
+  <fis ais cis dis>1~
+  <e gis b dis>1~
+  <fis ais cis dis>1~
+
+  <fis b dis>1 \fermata
+}
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
 %                                                      BUILD ALL
@@ -262,18 +369,27 @@ synthOnePart = {
 	\break
 
     % TEMA C
-	\repeat volta 2 \synthTemaC
+	\synthTemaC
 	\break
 
 	% TEMA A + B
 	\synthTemaAbis
 	\synthSoloistTemaB
+	\break
 
     % SOLO
+	\synthSoloistSolo
+	\break
 
     % TEMA C
+	\synthTemaC
+	\break
+
+	% CODA
+	\synthCoda
 
     % FINALE
+	\synthFinale
 
 
     \bar "|."
@@ -300,18 +416,27 @@ synthTwoPart = {
 	\break
 
     % TEMA C
-	\repeat volta 2 \synthTemaC
+	\synthArcTemaC
 	\break
 
 	% TEMA A + B
 	\synthTemaAbis
 	\synthTemaB
+	\break
 
     % SOLO
+	\synthSolo
+	\break
 
     % TEMA C
+	\synthArcTemaC
+	\break
+
+	% CODA
+	\synthArcCoda
 
     % FINALE
+	\synthArcFinale
 
 
     \bar "|."
@@ -338,18 +463,27 @@ organPart = {
 	\break
 
     % TEMA C
-	\repeat volta 2 \organTemaC
+	\organTemaC
 	\break
 
 	% TEMA A + B
 	\organTemaAbis
 	\organTemaB
+	\break
 
     % SOLO
+	\organSolo
+	\break
 
     % TEMA C
+	\organTemaC
+	\break
+
+	% CODA
+	\organCoda
 
     % FINALE
+	\organFinale
 
 
     \bar "|."
@@ -382,15 +516,15 @@ organPart = {
             \set Staff.instrumentName = \markup { "Synth" }
             \synthOnePart
         >>
-        \new Staff = "Synth" \with { midiInstrument = #"synthstrings 1" }
-        <<
-            \set Staff.instrumentName = \markup { "Synth" }
-            \synthTwoPart
-        >>
         \new Staff = "Organ" \with { midiInstrument = #"rock organ" }
         <<
             \set Staff.instrumentName = \markup { "Organ" }
             \organPart
+        >>
+        \new Staff = "Synth" \with { midiInstrument = #"synthstrings 1" }
+        <<
+            \set Staff.instrumentName = \markup { "Synth" }
+            \synthTwoPart
         >>
     >>
     \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
