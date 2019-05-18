@@ -246,14 +246,44 @@ organTemaC = \relative c' {
 % -----------------------------------------------------------------------------------------------------------------------
 synthSolo = \relative c' {
   r4. r4 r4 r4 r8
+  r4. r4 r4 r4 r8
+
+  r4. r4 r4 r4 r8
+  r4. r4 r4 r4 r8
+
+  r4. r4 r4 r4 r8
+  r4. r4 r4 r4 r8
+
+  r4. r4 r4 r4 r8
+  r4. r4 r4 r4 r8
 }
 
-synthSoloistSolo = \relative c' {
+synthSoloistSolo = \relative c''' {
+  c16 a fis d			c d ees d			c a fis  g			a bes c bes			a g fis c~
+  c8    r32 d ees f     a8  g8				bes16 a c bes		a g f ees			c ees d c
+
+  r4. r4 r4 r4 r8
+  r4. r4 r4 r4 r8
+
+  r4. r4 r4 r4 r8
+  r4. r4 r4 r4 r8
+
+  r4. r4 r4 r4 r8
   r4. r4 r4 r4 r8
 }
 
 organSolo = \relative c' {
-  r4. r4 r4 r4 r8
+  <d fis a>1~       <d fis a>4~
+  <ees f a c>1~     <ees f a c>4~
+
+  <d fis a>1~       <d fis a>4~
+  <ees f a c>1~     <ees f a c>4~
+
+  <d fis a>1~       <d fis a>4~
+  <ees f a c>1~     <ees f a c>4
+
+  <d g b>1~         <d g b>4
+  <e a cis>1~     <e a cis>4
 }
 XsynthSoloistSolo = \relative c' {
   cis16 a  e d			cis d e d		cis a fis g		a bes c bes		a g fis c~
