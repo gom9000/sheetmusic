@@ -131,7 +131,9 @@ organTemaA = \relative c' {
 }
 
 synthTemaAbis = \relative c' {
-  r4. r4 r4 r4 r8
+  \time 4/4
+  r4 r4 r4 r4
+  \time 5/4
   r4. r4 r4 r4 r8
 
   r4. r4 r4 r4 r8
@@ -142,8 +144,9 @@ synthTemaAbis = \relative c' {
 }
 
 organTemaAbis = \relative c'' {
+  \time 4/4
+  r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r8 <a cis e>16 r16
   \time 5/4
-  r4. <a c f>8 r8 <g c e>8 r8 <a d f>8 r8 <a cis e>16 r16
   <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r8 <g b d>16 r16
   
   <f a d>4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r8 <a cis e>16 r16
@@ -194,7 +197,7 @@ organTemaB = \relative c' {
 %                                                      TEMA C
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
-synthTemaC = \relative c' {
+synthTemaC = \relative c'' {
   \time 4/4
   r1  r1  r1  r1
   r2.. fis8~
@@ -206,7 +209,7 @@ synthTemaC = \relative c' {
   r1  r1  r1  r1
 }
 
-synthArcTemaC = \relative c' {
+synthArcTemaC = \relative c'' {
   \time 4/4
   r1  r1  r1  r1
   r1  r1  r1  r1
@@ -220,20 +223,20 @@ synthArcTemaC = \relative c' {
 
 organTemaC = \relative c' {
   \time 4/4
-  r4           <fis a d>8 <fis a d>8      <fis a d>4.  <g c e>8~
-  <g c e>1
-  r4           <fis a d>8 <fis a d>8      <fis a d>4 <fis a d>8  <g c e>8~
-  <g c e>1
+  r4           <fis a d>8 <fis a d>8      <fis a d>4.  <e g c>8~
+  <e g c>1
+  r4           <fis a d>8 <fis a d>8      <fis a d>4 <fis a d>8  <e g c>8~
+  <e g c>1
   r4           <a cis e>8 <a cis e>8      <a cis e>4 <a cis e>8  <g b d e>8~
   <g b d e>1
   r4           <a cis e>8 <a cis e>8      <a cis e>4 <a cis e>8  <g b d e>8~
   <g b d e>4.                             <g c e>4   <fis a d>4  r8
 
 
-  r4           <fis a d>8 <fis a d>8      <fis a d>4 <fis a d>8 <g c e>8~
-  <g c e>1
-  r4           <fis a d>8 <fis a d>8      <fis a d>4 <fis a d>8  <g c e>8~
-  <g c e>1
+  r4           <fis a d>8 <fis a d>8      <fis a d>4 <fis a d>8 <e g c>8~
+  <e g c>1
+  r4           <fis a d>8 <fis a d>8      <fis a d>4 <fis a d>8  <e g c>8~
+  <e g c>1
   r4           <a cis e>8 <a cis e>8      <a cis e>4 <a cis e>8  <g b d e>8~
   <g b d e>1
   r4           <a cis e>8 <a cis e>8      <a cis e>4 <a cis e>8  <g b d e>8~
@@ -273,22 +276,17 @@ synthSoloistSolo = \relative c''' {
 }
 
 organSolo = \relative c' {
-  <d fis a>1~       <d fis a>4~
+  <fis a d>1~       <fis a d>4~
   <ees f a c>1~     <ees f a c>4~
 
-  <d fis a>1~       <d fis a>4~
+  <fis a d>1~       <fis a d>4~
   <ees f a c>1~     <ees f a c>4~
 
-  <d fis a>1~       <d fis a>4~
+  <fis a d>1~       <fis a d>4~
   <ees f a c>1~     <ees f a c>4
 
   <d g b>1~         <d g b>4
   <e a cis>1~     <e a cis>4
-}
-XsynthSoloistSolo = \relative c' {
-  cis16 a  e d			cis d e d		cis a fis g		a bes c bes		a g fis c~
-  c d ees f             a8  g8          bes8 a c bes    a g f
-  
 }
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
@@ -382,7 +380,7 @@ synthOnePart = {
     \clef violin
 
     % INTRO
-    \time 4/4 r1 ^\markup { \tiny {string ensemble} }
+    \time 4/4 r1 ^\markup { \tiny {prophet strings/prosoloist pulsar} }
     \bar "||"
     \synthStringIntro
 
@@ -429,7 +427,7 @@ synthTwoPart = {
     \clef violin
 
     % INTRO
-    \time 4/4 r1 ^\markup { \tiny {string ensemble} }
+    \time 4/4 r1 ^\markup { \tiny {prophet staccato chords} }
     \bar "||"
     \synthArcIntro
 
@@ -476,7 +474,7 @@ organPart = {
     \clef violin
 
     % INTRO
-    \time 4/4 r1 ^\markup { \tiny {(86.8808.000)} }
+    \time 4/4 r1 ^\markup { \tiny {full organ} }
     \bar "||"
 	\organIntro
 
