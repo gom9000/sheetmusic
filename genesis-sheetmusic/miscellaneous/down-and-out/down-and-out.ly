@@ -29,10 +29,7 @@ synthStringIntro = \relative c''' {
   <e gis b dis>2~  <e gis b dis>8~     <e a d>2~            <e a d>8~
  
   <fis a d>1~       <fis a d>4~
-  \time 4/4
-  <fis a d>1
-
-  \time 5/4
+  <fis a d>1		r4
 }
 
 synthArcIntro = \relative c''' {
@@ -57,10 +54,7 @@ synthArcIntro = \relative c''' {
   <e gis b dis>2~  <e gis b dis>8~     <e a d>2~            <e a d>8~
  
   <fis a d>1~       <fis a d>4~
-  \time 4/4
-  <fis a d>1~
-
-  \time 5/4
+  <fis a d>1~		<e a cis>4
 }
 
 organIntro = \relative c' {
@@ -85,10 +79,32 @@ organIntro = \relative c' {
   r2 r8 r2 r8
  
   r2 r8 r2 r8
-  \time 4/4
-  r1
+  r1 <e a cis>4
+}
+
+guitarIntro = \relative c' {
+               r1
+               r1
+
+  \time 6/4    r1                  r2
+               r1                  r2
+               r1                  r2
+               r1                  r2
+
+  \time 5/4    r1                  r4
+  \time 4/4    r1
+
+  \break
 
   \time 5/4
+  b16 b16 fis'16 fis16 		b,16 b16 b'16 b16		b,16 b16 fis'16 b,16		b16 b'8. 			b,8 r8
+  b16 b16 fis'16 fis16 		b,16 b16 b'16 b16		b,16 b16 fis'16 b,16		b16 b'8. 			b,8 r8
+
+  b16 b16 fis'16 fis16 		b,16 b16 b'16 b16		b,16 b16 fis'16 b,16		b16 b'8. 			b,8 r8
+  b16 b16 fis'16 fis16 		b,16 b16 b'16 b16		b,16 b16 fis'16 b,16		b16 b'8. 			a,8 r8
+ 
+  d16 d16 a'16 a16 			d,16 d16 d'16 d16		d,16 d16 a'16 d,16			d16 d'8. 			d,8 r8
+  d16 d16 a'16 a16 			d,16 d16 d'16 d16		d,16 d16 a'16 d,16			d16 d'8. 			d,8 r8
 }
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
@@ -96,18 +112,23 @@ organIntro = \relative c' {
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
 synthStringBridgeIntroTema = \relative c' {
-  r4 r1
-  r4. r4 r4 r4 r8
+  \time 4/4 r1
+  \time 5/4 r4. r4 r4 r4 r8
 }
 
 synthArcBridgeIntroTema = \relative c' {
-  <e a cis>4 r1
-  r4. r4 r4 r4 r8
+  \time 4/4 r1
+  \time 5/4 r4. r4 r4 r4 r8
 }
 
-organBridgeIntroTema = \relative c' {
-  <e a cis>4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r8 <a cis e>16 r16
-  <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r8 <g b d>16 r16
+organBridgeIntroTema = \relative c'' {
+  \time 4/4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r16 <a cis e>8 r16
+  \time 5/4 <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r16 <g b d>8 r16
+}
+
+guitarBridgeIntroTema = \relative c' {
+  \time 4/4 d16 d16 a'16 a16 			d,16 d16 d'16 d16		d,16 d16 a'16 d,16			d16 d'8.
+  \time 5/4 d,8 r8			d16 d16 a'16 a16 			d,16 d16 d'16 d16		d,16 d16 a'16 d,16			d16 d'8.
 }
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
@@ -123,11 +144,11 @@ synthTemaA = \relative c' {
 }
 
 organTemaA = \relative c' {
-  <f a d>4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r8 <a cis e>16 r16
-  <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r8 <g b d>16 r16
+  <f a d>4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r16 <a cis e>8 r16
+  <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r16 <g b d>8 r16
   
-  <f a d>4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r8 <a cis e>16 r16
-  <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r8 <g b d>16 r16
+  <f a d>4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r16 <a cis e>8 r16
+  <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r16 <g b d>8 r16
 }
 
 synthTemaAbis = \relative c' {
@@ -145,15 +166,23 @@ synthTemaAbis = \relative c' {
 
 organTemaAbis = \relative c'' {
   \time 4/4
-  r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r8 <a cis e>16 r16
+  r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r16 <a cis e>8 r16
   \time 5/4
-  <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r8 <g b d>16 r16
+  <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r16 <g b d>8 r16
   
-  <f a d>4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r8 <a cis e>16 r16
-  <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r8 <g b d>16 r16
+  <f a d>4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r16 <a cis e>8 r16
+  <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r16 <g b d>8 r16
 
-  <f a d>4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r8 <a cis e>16 r16
-  <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r8 <g b d>16 r16
+  <f a d>4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r16 <a cis e>8 r16
+  <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r16 <g b d>8 r16
+}
+
+guitarTemaA = \relative c'' {
+  d,8 r8			d16 d16 a'16 a16 			d,16 d16 d'16 d16		d,16 d16 a'16 d,16			d16 d'8.
+  d,8 r8			d16 d16 a'16 a16 			d,16 d16 d'16 d16		d,16 d16 a'16 d,16			d16 d'8.
+
+  d,8 r8			d16 d16 a'16 a16 			d,16 d16 d'16 d16		d,16 d16 a'16 d,16			d16 d'8.
+  d,8 r8			d16 d16 a'16 a16 			d,16 d16 d'16 d16		d,16 d16 a'16 d,16			d16 d'8.
 }
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
@@ -172,14 +201,14 @@ synthTemaB = \relative c' {
 }
 
 synthSoloistTemaB = \relative c' {
-  r4.   d4   fis4  a4   c8
-  b4.   g4   b4    d4   f8
-  e4.   c4   e4    g4   bes8
-  a4.   f,4  a4    c4   ees8
-  d4.   d,4  fis4  a4   c8
-  bes4. g4   bes4  d4   f8
-  ees4. c4   ees4  g4   bes8
-  a4.   a,4  cis4  e4   g8
+  r4.   d4   fis4  a8.  c8.
+  b4.   g4   b4    d8.  f8.
+  e4.   c4   e4    g8.  bes8.
+  a4.   f,4  a4    c8.  ees8.
+  d4.   d,4  fis4  a8.  c8.
+  bes4. g4   bes4  d8.  f8.
+  ees4. c4   ees4  g8.  bes8.
+  a4.   a,4  cis4  e8.  g8.
 }
 
 organTemaB = \relative c' {
@@ -191,6 +220,17 @@ organTemaB = \relative c' {
   <g bes d>1~       <g bes d>4~
   <g c ees>1~       <g c ees>4
   <a cis e>1~       <a cis e>4
+}
+
+guitarTemaB = \relative c' {
+  d8 r8 d r d r d r d16 d16 r8
+  d8 r8 d r d r d r d16 d16 r8
+  d8 r8 d r d r d r d16 d16 r8
+  d8 r8 d r d r d r d16 d16 r8
+  d8 r8 d r d r d r d16 d16 r8
+  d8 r8 d r d r d r d16 d16 r8
+  d8 r8 d r d r d r d16 d16 r8
+  d8 r8 d r d r d r d16 d16 r8
 }
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
@@ -376,6 +416,53 @@ organFinale = \relative c' {
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
 
+guitarPart = {
+    \clef violin
+
+    % INTRO
+    \time 4/4 r1 ^\markup { \tiny {prophet strings/prosoloist pulsar} }
+    \bar "||"
+    \guitarIntro
+
+    % BRIDGE INTRO-TEMA
+	\guitarBridgeIntroTema
+	\break
+
+    % TEMA A + B
+	\repeat volta 2 {
+	    \guitarTemaA
+	    \break
+	    \guitarTemaB
+	}
+	\break
+
+    % TEMA C
+%	\synthTemaC
+	\break
+
+	% TEMA A + B
+%	\synthTemaAbis
+%	\synthSoloistTemaB
+	\break
+
+    % SOLO
+%	\synthSoloistSolo
+	\break
+
+    % TEMA C
+%	\synthTemaC
+	\break
+
+	% CODA
+%	\synthCoda
+
+    % FINALE
+%	\synthFinale
+
+
+    \bar "|."
+}
+
 synthOnePart = {
     \clef violin
 
@@ -539,6 +626,11 @@ organPart = {
 
     \score {
     <<
+%	    \new Staff = "Synth" \with { midiInstrument = #"overdriven guitar" }
+%        <<
+%            \set Staff.instrumentName = \markup { "Guitar" }
+%            \guitarPart
+%        >>
         \new Staff = "Synth" \with { midiInstrument = #"string ensemble 1" }
         <<
             \set Staff.instrumentName = \markup { "Synth" }
