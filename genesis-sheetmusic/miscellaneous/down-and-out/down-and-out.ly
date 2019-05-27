@@ -248,7 +248,17 @@ synthTemaC = \relative c'' {
   r1  r1  r1  r1
   r1  r1  r1  r1
 }
+synthTemaCBis = \relative c'' {
+  \time 4/4
+  a'1   r1  r1  r1
+  r2.. fis8~
+  fis4 e4 b'4 a4
+  cis2. r4
+  r1
 
+  r1  r1  r1  r1
+  r1  r1  r1  r1
+}
 synthArcTemaC = \relative c'' {
   \time 4/4
   r1  r1  r1  r1
@@ -305,14 +315,20 @@ synthSoloistSolo = \relative c''' {
   c16 a fis d			c d ees d			c a fis  g			a bes c bes			a g fis c~
   c8    r32 d ees f     a8  g8				bes16 a c bes		a g f ees			c ees d c
 
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
+  \tuplet 3/2 {a16 c d} \tuplet 3/2 {c bes c} \tuplet 3/2 {a c32 d ees d}  \tuplet 3/2 {c16 a c} \tuplet 3/2 {d c bes}
+      \tuplet 3/2 {c bes a}  \tuplet 3/2 {bes c bes}  \tuplet 3/2 {a g a}  \tuplet 3/2 {bes a g} \tuplet 3/2 {a g ees}
 
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
+% f16 a32 bes  c16 d32 ees	 \tuplet 3/2 {f8 a c}	ees16 d ees d	g f ees d	c bes c d
+  \tuplet 3/2 {ees16 f a} \tuplet 3/2 {c ees f} \tuplet 3/2 {a c ees } \tuplet 3/2 {f a c}  ees16 d ees d	g f ees d	c bes c d
 
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
+  c4. 					bes4 			a4 				  fis8. 			d8.
+  c8 a 					f c 				ees d				c16 a f c			f a c ees
+
+  g, b \tuplet 3/2 {ees16 d b}       \tuplet 3/2 {g b d}  \tuplet 3/2 {f d b}  \tuplet 3/2 {f' d b} 
+      \tuplet 3/2 {g b d}  \tuplet 3/2 {ees d b}  \tuplet 3/2 {g b d}  \tuplet 3/2 {f d b}  \tuplet 3/2 {f' d b}
+
+  \tuplet 3/2 {a cis e} \tuplet 3/2 {f e  cis} \tuplet 3/2 {a cis e} \tuplet 3/2 {g e cis} \tuplet 3/2 {g' e cis}
+      \tuplet 3/2 {a cis e}  \tuplet 3/2 {f g a}   \tuplet 3/2 {bes c cis} \tuplet 3/2 {d e f} \tuplet 3/2 {g a bes}
 }
 
 organSolo = \relative c' {
@@ -497,7 +513,7 @@ synthOnePart = {
 	\break
 
     % TEMA C
-	\synthTemaC
+	\synthTemaCBis
 	\break
 
 	% CODA
@@ -631,7 +647,7 @@ organPart = {
 %            \set Staff.instrumentName = \markup { "Guitar" }
 %            \guitarPart
 %        >>
-        \new Staff = "Synth" \with { midiInstrument = #"string ensemble 1" }
+        \new Staff = "Synth" \with { midiInstrument = #"lead 2 (sawtooth)" } %% string ensemble 1" }
         <<
             \set Staff.instrumentName = \markup { "Synth" }
             \synthOnePart
