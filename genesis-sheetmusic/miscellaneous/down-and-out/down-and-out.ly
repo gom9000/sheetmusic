@@ -113,16 +113,16 @@ guitarIntro = \relative c' {
 % -----------------------------------------------------------------------------------------------------------------------
 synthStringBridgeIntroTema = \relative c' {
   \time 4/4 r1
-  \time 5/4 r4. r4 r4 r4 r8
+  \time 5/4 r1 r4
 }
 
 synthArcBridgeIntroTema = \relative c' {
   \time 4/4 r1
-  \time 5/4 r4. r4 r4 r4 r8
+  \time 5/4 r1 r4
 }
 
 organBridgeIntroTema = \relative c'' {
-  \time 4/4 r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r16 <a cis e>8 r16
+  \time 4/4 r8 ^\markup { \tiny {raddoppiare un'ottava sopra} } <a c f>8 r8 <g c e>8 r8 <a d f>8 r16 <a cis e>8 r16
   \time 5/4 <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r16 <g b d>8 r16
 }
 
@@ -136,11 +136,11 @@ guitarBridgeIntroTema = \relative c' {
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
 synthTemaA = \relative c' {
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
+  r1 r4
+  r1 r4
 
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
+  r1 r4
+  r1 r4
 }
 
 organTemaA = \relative c' {
@@ -155,18 +155,18 @@ synthTemaAbis = \relative c' {
   \time 4/4
   r4 r4 r4 r4
   \time 5/4
-  r4. r4 r4 r4 r8
+  r1 r4
 
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
+  r1 r4
+  r1 r4
 
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
+  r1 r4
+  r1 r4
 }
 
 organTemaAbis = \relative c'' {
   \time 4/4
-  r8 <a c f>8 r8 <g c e>8 r8 <a d f>8 r16 <a cis e>8 r16
+  r8 ^\markup { \tiny {raddoppiare un'ottava sopra} } <a c f>8 r8 <g c e>8 r8 <a d f>8 r16 <a cis e>8 r16
   \time 5/4
   <a d f>4 r8 <bes d f>8 r8 <a c f>8 r8 <g c e>8 r16 <g b d>8 r16
   
@@ -190,14 +190,14 @@ guitarTemaA = \relative c'' {
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
 synthTemaB = \relative c' {
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
+  r1 r4
+  r1 r4
+  r1 r4
+  r1 r4
+  r1 r4
+  r1 r4
+  r1 r4
+  r1 r4
 }
 
 synthSoloistTemaB = \relative c' {
@@ -239,21 +239,10 @@ guitarTemaB = \relative c' {
 % -----------------------------------------------------------------------------------------------------------------------
 synthTemaC = \relative c'' {
   \time 4/4
-  r1  r1  r1  r1
+  a'2 r2   r1  r1  r1
   r2.. fis8~
   fis4 e4 b'4 a4
-  cis2. r4
-  r1
-
-  r1  r1  r1  r1
-  r1  r1  r1  r1
-}
-synthTemaCBis = \relative c'' {
-  \time 4/4
-  a'1   r1  r1  r1
-  r2.. fis8~
-  fis4 e4 b'4 a4
-  cis2. r4
+  cis2 r2
   r1
 
   r1  r1  r1  r1
@@ -267,26 +256,26 @@ synthArcTemaC = \relative c'' {
   r1  r1  r1  r1
   r2.. <fis a>8~
   <fis a>4 <e g>4 <b' d>4 <a cis>4
-  <cis e>2. r4
+  <cis e>2 r2
   r1
 }
 
-organTemaC = \relative c' {
+organTemaC = \relative c'' {
   \time 4/4
-  r4           <fis a d>8 <fis a d>8      <fis a d>4.  <e g c>8~
-  <e g c>1
-  r4           <fis a d>8 <fis a d>8      <fis a d>4 <fis a d>8  <e g c>8~
-  <e g c>1
+  r4           <d fis a>8 <d fis a>8      <d fis a>4.  <c e g>8~
+  <c e g>1
+  r4           <d fis a>8 <d fis a>8      <d fis a>4 <d fis a>8  <c e g>8~
+  <c e g>1
   r4           <a cis e>8 <a cis e>8      <a cis e>4 <a cis e>8  <g b d e>8~
   <g b d e>1
   r4           <a cis e>8 <a cis e>8      <a cis e>4 <a cis e>8  <g b d e>8~
   <g b d e>4.                             <g c e>4   <fis a d>4  r8
 
 
-  r4           <fis a d>8 <fis a d>8      <fis a d>4 <fis a d>8 <e g c>8~
-  <e g c>1
-  r4           <fis a d>8 <fis a d>8      <fis a d>4 <fis a d>8  <e g c>8~
-  <e g c>1
+  r4           <d' fis a>8 <d fis a>8      <d fis a>4 <d fis a>8 <c e g>8~
+  <c e g>1
+  r4           <d fis a>8 <d fis a>8      <d fis a>4 <d fis a>8  <c e g>8~
+  <c e g>1
   r4           <a cis e>8 <a cis e>8      <a cis e>4 <a cis e>8  <g b d e>8~
   <g b d e>1
   r4           <a cis e>8 <a cis e>8      <a cis e>4 <a cis e>8  <g b d e>8~
@@ -298,27 +287,26 @@ organTemaC = \relative c' {
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
 synthSolo = \relative c' {
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
+  r1 r4
+  r1 r4
 
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
+  r1 r4
+  r1 r4
 
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
+  r1 r4
+  r1 r4
 
-  r4. r4 r4 r4 r8
-  r4. r4 r4 r4 r8
+  r1 r4
+  r1 r4
 }
 
 synthSoloistSolo = \relative c''' {
   c16 a fis d			c d ees d			c a fis  g			a bes c bes			a g fis c~
   c8    r32 d ees f     a8  g8				bes16 a c bes		a g f ees			c ees d c
 
-  \tuplet 3/2 {a16 c d} \tuplet 3/2 {c bes c} \tuplet 3/2 {a c32 d ees d}  \tuplet 3/2 {c16 a c} \tuplet 3/2 {d c bes}
-      \tuplet 3/2 {c bes a}  \tuplet 3/2 {bes c bes}  \tuplet 3/2 {a g a}  \tuplet 3/2 {bes a g} \tuplet 3/2 {a g ees}
+  \tuplet 3/2 {a16 c d} \tuplet 3/2 {c bes c} \tuplet 3/2 {a c d}  \tuplet 3/2 {ees d c} \tuplet 3/2 {d c bes}
+      \tuplet 3/2 {c bes a}  \tuplet 3/2 {bes c bes}  \tuplet 3/2 {a g a}  \tuplet 3/2 {bes a g} \tuplet 3/2 {a g f}
 
-% f16 a32 bes  c16 d32 ees	 \tuplet 3/2 {f8 a c}	ees16 d ees d	g f ees d	c bes c d
   \tuplet 3/2 {ees16 f a} \tuplet 3/2 {c ees f} \tuplet 3/2 {a c ees } \tuplet 3/2 {f a c}  ees16 d ees d	g f ees d	c bes c d
 
   c4. 					bes4 			a4 				  fis8. 			d8.
@@ -331,18 +319,18 @@ synthSoloistSolo = \relative c''' {
       \tuplet 3/2 {a cis e}  \tuplet 3/2 {f g a}   \tuplet 3/2 {bes c cis} \tuplet 3/2 {d e f} \tuplet 3/2 {g a bes}
 }
 
-organSolo = \relative c' {
-  <fis a d>1~       <fis a d>4~
-  <ees f a c>1~     <ees f a c>4~
+organSolo = \relative c'' {
+  <a d fis>1~       <a d fis>4~
+  <a c ees f>1~     <a c ees f>4~
 
-  <fis a d>1~       <fis a d>4~
-  <ees f a c>1~     <ees f a c>4~
+  <a d fis>1~       <a d fis>4~
+  <a c ees f>1~     <a c ees f>4~
 
-  <fis a d>1~       <fis a d>4~
-  <ees f a c>1~     <ees f a c>4
+  <a d fis>1~       <a d fis>4~
+  <a c ees f>1~     <a c ees f>4~
 
-  <d g b>1~         <d g b>4
-  <e a cis>1~     <e a cis>4
+  <g b d f>1~       <g b d f>4
+  <g a cis e>1~     <g a cis e>4
 }
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
@@ -397,7 +385,7 @@ synthFinale = \relative c' {
 
 synthArcFinale = \relative c' {
   \time 3/4
-  <ees ees'>2.~
+  <ees' ees'>2.~
   \time 4/4
   <ees ees'>1~
   <ees ees'>1~
@@ -513,7 +501,7 @@ synthOnePart = {
 	\break
 
     % TEMA C
-	\synthTemaCBis
+	\synthTemaC
 	\break
 
 	% CODA
