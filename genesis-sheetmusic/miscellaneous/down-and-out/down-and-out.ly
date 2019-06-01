@@ -376,15 +376,6 @@ organCoda = \relative c' {
 % -----------------------------------------------------------------------------------------------------------------------
 synthFinale = \relative c' {
   \time 3/4
-  r2.
-  \time 4/4
-  r1 r1 r1 
-  r1 r1 r1 r1
-  r1 \fermata
-}
-
-synthArcFinale = \relative c' {
-  \time 3/4
   <ees' ees'>2.~
   \time 4/4
   <ees ees'>1~
@@ -397,6 +388,15 @@ synthArcFinale = \relative c' {
   <gis gis'>2.   <fis fis'>4
 
   <b b'>1 \fermata
+}
+
+synthArcFinale = \relative c' {
+  \time 3/4
+  r2.
+  \time 4/4
+  r1 r1 r1 
+  r1 r1 r1 r1
+  r1 \fermata
 }
 
 organFinale = \relative c' {
