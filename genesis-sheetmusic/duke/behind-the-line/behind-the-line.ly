@@ -227,13 +227,13 @@ pianoLowerIntroBridgeC = \relative c'' {
 }
 
 synthIntroBridgeD = \relative c'' {
-    r2 a'4 g
+    r2 ^\markup { \tiny {synth flute} } a'4 g 									
 	fis d e2
 	fis2 a4 g
 	fis d e g
 
 	fis d a2 r1
-	<b d fis>1
+	<b d fis>1		^\markup { \tiny {synth brass/saw} }
 
 	<gis b e>2~ <gis b e>8		<fis b d>4.
 	<gis b e>2~ <gis b e>8		<fis b d>4.
@@ -360,17 +360,7 @@ pianoLowerIntroBridgeF = \relative c'' {
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
 organFinale = \relative c' {
-  \time 3/4
-  <fis b dis>2.~
-  \time 4/4
-  <fis ais cis dis>1~
-  <e gis b dis>1~
-  <fis ais cis dis>1~
 
-  <fis b dis>1~
-  <fis ais cis dis>1~
-  <e gis b dis>1~
-  <fis ais cis dis>1~
 
   <fis b dis>1 \fermata
 }
@@ -383,7 +373,7 @@ organFinale = \relative c' {
 synthPart = {
     \clef violin
 
-    \time 4/4 r1 ^\markup { \tiny {prophet staccato chords} }
+    \time 4/4 r1 ^\markup { \tiny {synth brass/saw} }
     \bar "||"
 
 	% INTRO
@@ -398,7 +388,7 @@ synthPart = {
 pianoUpperPart = {
     \clef violin
 
-    \time 4/4 r1 ^\markup { \tiny {CP80} }
+    \time 4/4 r1 ^\markup { \tiny {e-piano} }
     \bar "||"
 
     % INTRO
