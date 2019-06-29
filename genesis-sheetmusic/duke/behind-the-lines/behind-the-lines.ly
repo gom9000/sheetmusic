@@ -425,7 +425,7 @@ pianoLowerPart = {
 \book {
 
     \header {
-        title       = \markup {\larger "BEHIND THE LINE"}
+        title       = \markup {\larger "BEHIND THE LINES"}
         subtitle    = ""
         subsubtitle = "from the album Duke (1980)"
         instrument  = "keyboards"
