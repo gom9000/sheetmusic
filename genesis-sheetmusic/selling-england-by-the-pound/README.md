@@ -3,10 +3,10 @@
 
 ## Scores
 * [Dancing with the Moonlit Knight]
-* [I Know What I Like](https://github.com/gos95-sheetmusic/genesis-sheetmusic/tree/master/selling-england-by-the-pound/i-know-what-i-like/)
-* [Firth of Fifth](https://github.com/gos95-sheetmusic/genesis-sheetmusic/tree/master/selling-england-by-the-pound/firth-of-fifth/)
+* [I Know What I Like](i-know-what-i-like)
+* [Firth of Fifth](firth-of-fifth)
 * [More Fool Me]
-* [The Battle of Epping Forest](https://github.com/gos95-sheetmusic/genesis-sheetmusic/tree/master/selling-england-by-the-pound/the-battle-of-epping-forest/)
-* [After the Ordeal](https://github.com/gos95-sheetmusic/genesis-sheetmusic/tree/master/selling-england-by-the-pound/after-the-ordeal/)
+* [The Battle of Epping Forest](the-battle-of-epping-forest)
+* [After the Ordeal](after-the-ordeal)
 * [The Cinema Show]
 * [Aisle of Plenty]
