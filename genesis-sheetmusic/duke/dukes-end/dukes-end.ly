@@ -164,7 +164,7 @@ pianoLowerBridge = \relative c'' {
 %                                                      TEMA TURN IT ON AGAIN
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
-temaTIOAa = \relative c'' {
+temaTIOAa = {
 	r4 <b fis'>8 r4. <b fis'>8 <b fis'>8
 	r4 <b fis'>8 r4. <b fis'>8 <b fis'>8
 	r4 <b fis'>8 r4. <b fis'>8 <b fis'>8
@@ -173,7 +173,7 @@ temaTIOAa = \relative c'' {
 	r4 <b fis'>8 r4. <b fis'>8 <b fis'>8
 }
 
-temaTIOAb = \relative c' {
+temaTIOAb = {
 	<e gis b>4.		<e a cis>4.		<e gis b>4
 	<fis b dis>4. 	<fis b dis>4. 	r4
 	<fis ais cis>4. <fis ais cis>4. r4
@@ -182,7 +182,7 @@ temaTIOAb = \relative c' {
 	<a d fis>4. 	<a d fis>4.		r4
 	<a cis e>4. 	<a cis e>4. 	<g b d>4
 }
-temaTIOAc = \relative c' {
+temaTIOAc = {
 	<e gis b>4.		<e a cis>4.		<e gis b>4
 	<fis b dis>4. 	<fis b dis>4. 	r4
 	<fis ais cis>4. <fis ais cis>4. r4
@@ -194,7 +194,7 @@ temaTIOAc = \relative c' {
 %                                                      FINALE
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
-finaleBridgeA = \relative c'' {
+finaleBridgeA =  {
 	<a d fis>4. 	<a d fis>4.		r4
 	<a d fis>4. 	<a d fis>4.		r4
 	<a d fis>4. 	<a d fis>4.		r4
@@ -205,7 +205,8 @@ finaleBridgeA = \relative c'' {
 	<a d fis>4 r8 	<a d fis>4.		r4
 	<a d fis>4 r8 	<a d fis>4.		r4
 }
-finaleBridgeB = \relative c'' {
+
+finaleBridgeB =  {
 	<a d fis>4 r8 	<a d fis>4.		r4
 	<a d fis>4 r8 	<a d fis>4.		r4
 	<a d fis>4 r8 	<a d fis>4.		r4
@@ -216,15 +217,25 @@ finaleBridgeB = \relative c'' {
 	<gis b e>4 r8 	<gis b e>4.		r4
 	<gis b e>4 r8 	<gis b e>4.		r4
 }
-finaleBridgeC = \relative c'' {
+
+synthFinaleBridgeC = \relative c' {
   <a c f>4 r8 	<a c f>4.		<f a d>4
-  \time 3/4  <a c e>4   d8		<a c f>4 		d8	
+  \time 3/4  <a c e>4   r8		<a d f>4 		r8	
+  \time 4/4 <b e g>1
+  <b e g>4 r8 	<b e g>4.		<g b e>4
+  \time 3/4  <b d fis>4   r8	<b e g>4 		r8
+  \time 4/4
+}
+pianoUpperFinaleBridgeC = \relative c'' {
+  <a c f>4 r8 	<a c f>4.		<f a d>4
+  \time 3/4  <a c e>4   d8		<a d f>4 		d8	
   \time 4/4 <b e g>1
   <b e g>4 r8 	<b e g>4.		<g b e>4
   \time 3/4  <b d fis>4   e8	<b e g>4 		e8
   \time 4/4
 }
-synthFinale = \relative c'' {
+
+synthFinale = \relative c' {
   <a cis e a>2	<a cis e g>4 <a cis e fis>4
   <g b d fis>2 <g b e>2
   <fis b dis fis>1
@@ -265,13 +276,13 @@ synthPart = {
 	% TEMA TURN IT ON AGAIN
 	r1 r1 r1 r1 r1 r1
 	r1 r1 r1 r1 r1 r1
-	\temaTIOAb
-	\temaTIOAc
+	\relative c \temaTIOAb
+	\relative c \temaTIOAc
 
 	% FINALE
-	\finaleBridgeA
-	\finaleBridgeB
-	\finaleBridgeC
+	\relative c' \finaleBridgeA
+	\relative c' \finaleBridgeB
+	\synthFinaleBridgeC
 	\synthFinale
 
 	\bar "|."
@@ -297,15 +308,15 @@ pianoUpperPart = {
 
 	% TEMA TURN IT ON AGAIN
 	r1 r1 r1 r1 r1 r1
-	\temaTIOAa	\break
-	\temaTIOAb
-	\temaTIOAc
+	\relative c'' \temaTIOAa	\break
+	\relative c' \temaTIOAb
+	\relative c' \temaTIOAc
 	\break
 
 	% FINALE
-	\finaleBridgeA \break
-	\finaleBridgeB
-	\finaleBridgeC
+	\relative c'' \finaleBridgeA \break
+	\relative c'' \finaleBridgeB
+	\pianoUpperFinaleBridgeC
 	\pianoUpperFinale
 
     \bar "|."
