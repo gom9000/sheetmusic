@@ -216,14 +216,20 @@ synthIntroBridgeC = \relative c'' {
     r1 r1 r1 r1
 }
 pianoUpperIntroBridgeC = \relative c'' {
+    <dis fis b>2		<dis fis ais>2
+	<dis fis>1
+
+    <dis fis b>2		<dis fis ais>2
+    <e gis>2			<e g>2
+}
+pianoLowerIntroBridgeC = \relative c' {
+    \clef violin
     <b dis fis b>2		<b dis fis ais>2
 	<b dis fis>1
 
     <b dis fis b>2		<b dis fis ais>2
     <b e gis>2			<b e g>2
-}
-pianoLowerIntroBridgeC = \relative c'' {
-    r1 r1 r1 r1
+	\clef bass
 }
 
 synthIntroBridgeD = \relative c'' {
@@ -300,7 +306,7 @@ synthIntroBridgeF = \relative c'' {
 	<g c e>4			<a c f>2.
 
     r2								r8	<a c f>4.
-	<g c e>4			<f bes d>4		<g b d>2
+	<g c e>4			<f bes d>4		<g b d>4.		r8
 }
 pianoUpperIntroBridgeF = \relative c'' {
     r2								r8	<g c e g>4.
@@ -313,47 +319,71 @@ pianoUpperIntroBridgeF = \relative c'' {
 	<g c e g>4			<a c f a>2.
 
     r2								r8	<a c f a>4.
-	<g c e g>4			<f bes d f>4	<g b d>2
+	<g c e g>4			<f bes d f>4	<g b d>4. 		<c e g>8~
 }
-pianoLowerIntroBridgeF = \relative c'' {
-    c2 r2	r1			c2 r2	r1			c2 r2	r1			c2 r2	r1
+pianoLowerIntroBridgeF = \relative c {
+    c2 r2	r1			c2 r2	r1			c2 r2	r1			c2 r2			r2..		<g' c e>8~
 }
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
-%                                                      TEMA
+%                                                      TEMA CANTATO
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
+synthCantatoA = \relative c'' {
+    r1 r1 r1 r1 r1 r1 r1 r1
+}
+pianoUpperCantatoA = \relative c'' {
+	<c e g>4	<c d f>4	<c e g>4		g4			  
+	c4	   		<g' c e>2			    	r8  <c, f a>8~
 
-% -----------------------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------------------
-%                                                      TEMA A
-% -----------------------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------------------
+	<c f a>4	<b e g>4	<a d f>4		a4
+	d4			<d g b>2					r8   <b e g>8~
 
-% -----------------------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------------------
-%                                                      TEMA B
-% -----------------------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------------------
+	<b e g>4	<a d f>4	<a c e>4		a4
+	c4			<a d f>2					r8   <a c f>8~
 
-% -----------------------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------------------
-%                                                      TEMA C
-% -----------------------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------------------
+	<a c f>4	<a c e>4	<a c d>4	<a c>4
+	<f bes d f>4			<g b d>2		r8   <c e g>8~
+}
+pianoLowerCantatoA = \relative c' {
+	<g c e>4   <f c' d>4	<g c e>2~
+	<g c e>2~				<g c e>4		r8   <a c f>8~
 
-% -----------------------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------------------
-%                                                      SOLO
-% -----------------------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------------------
+	<a c f>4	<g e'>4		<f a d>2~
+	<f a d>4	<g b d>2					r8   <g b e>8~
 
-% -----------------------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------------------
-%                                                      CODA
-% -----------------------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------------------
+	<g b e>4	<f d'>4		<e a c>2~
+    <e a c>4	<f a d>2~					<f a>8~  <f a f'>8~
 
+	<f a f'>4~  <f a e'>4~	<f a d>4~		<f a>4          
+	bes4		<g b d>2					r8   <g c e>8~
+}
+pianoUpperCantatoAb = \relative c'' {
+	<c e g>4	<c d f>4	<c e g>4		g4			  
+	c4	   		<g' c e>2			    	r8  <c, f a>8~
+
+	<c f a>4	<b e g>4	<a d f>4		a4
+	d4			<d g b>2					r8   <b e g>8~
+
+	<b e g>4	<a d f>4	<a c e>4		a4
+	c4			<a d f>2					r8   <a c f>8~
+
+	<a c f>4	<a c e>4	<a c d>4	<a c>4
+	<f bes d f>4			<g b d>2		r8   <bes ees g>8~
+}
+pianoLowerCantatoAb = \relative c' {
+	<g c e>4   <f c' d>4	<g c e>2~
+	<g c e>2~				<g c e>4		r8   <a c f>8~
+
+	<a c f>4	<g e'>4		<f a d>2~
+	<f a d>4	<g b d>2					r8   <g b e>8~
+
+	<g b e>4	<f d'>4		<e a c>2~
+    <e a c>4	<f a d>2~					<f a>8~  <f a f'>8~
+
+	<f a f'>4~  <f a e'>4~	<f a d>4~		<f a>4          
+	bes4		<g b d>2					r8   <bes ees g>8~
+}
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
 %                                                      FINALE
@@ -381,8 +411,13 @@ synthPart = {
 	\synthIntroBridgeA \synthIntroBridgeB
 	\synthIntroBridgeC \synthIntroBridgeD
 	\synthIntroBridgeE \synthIntroBridgeF
-	\bar "||"
 	\break
+
+	% TEMA CANTATO
+	\repeat volta 2 {
+	    \synthCantatoA
+	}
+	\synthCantatoA
 }
 
 pianoUpperPart = {
@@ -396,9 +431,13 @@ pianoUpperPart = {
 	\pianoUpperIntroBridgeA \break \pianoUpperIntroBridgeB \break
     \pianoUpperIntroBridgeC \pianoUpperIntroBridgeD \break
 	\pianoUpperIntroBridgeE \pianoUpperIntroBridgeF
-	\bar "||"
 	\break
 
+	% TEMA CANTATO
+	\repeat volta 2 {
+	    \pianoUpperCantatoA
+	}
+	\pianoUpperCantatoAb
 
     \bar "|."
 }
@@ -413,9 +452,14 @@ pianoLowerPart = {
 	\pianoLowerIntroA \pianoLowerIntroB \pianoLowerIntroA \pianoLowerIntroB
 	\pianoLowerIntroBridgeA \pianoLowerIntroBridgeB
 	\pianoLowerIntroBridgeC \pianoLowerIntroBridgeD
-	\pianoLowerIntroA \pianoLowerIntroB
-	\bar "||"
+	\pianoLowerIntroA \pianoLowerIntroBridgeF
 	\break
+
+	% TEMA CANTATO
+	\repeat volta 2 {
+	    \pianoLowerCantatoA
+	}
+	\pianoLowerCantatoAb
 }
 
 
