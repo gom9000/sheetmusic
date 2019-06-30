@@ -235,7 +235,7 @@ pianoUpperFinaleBridgeC = \relative c'' {
   \time 4/4
 }
 
-synthFinale = \relative c' {
+synthFinale = \relative c'' {
   <a cis e a>2	<a cis e g>4 <a cis e fis>4
   <g b d fis>2 <g b e>2
   <fis b dis fis>1
@@ -276,12 +276,12 @@ synthPart = {
 	% TEMA TURN IT ON AGAIN
 	r1 r1 r1 r1 r1 r1
 	r1 r1 r1 r1 r1 r1
-	\relative c \temaTIOAb
-	\relative c \temaTIOAc
+	\relative c' \temaTIOAb
+	\relative c' \temaTIOAc
 
 	% FINALE
-	\relative c' \finaleBridgeA
-	\relative c' \finaleBridgeB
+	\relative c'' \finaleBridgeA
+	\relative c'' \finaleBridgeB
 	\synthFinaleBridgeC
 	\synthFinale
 
