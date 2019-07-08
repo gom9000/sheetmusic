@@ -1,115 +1,152 @@
-\version "2.7.39"
+\version "2.12.3"
+#(ly:set-option 'delete-intermediate-files #t)
 
 
-\include "ArticolazioniTerzineCarmela.ly"
-\include "ArticolazioniQuartineCarmelaA.ly"
-\include "ArticolazioniQuartineCarmelaB.ly"
-\include "ArticolazioniVarianti.ly"
-\include "ArticolazioniSestine.ly"
+% INCLUDES
+\include "articolazione-terzine.ly"
+\include "articolazione-quartine.ly"
+\include "arpeggio-esteso-2-ottave.ly"
+
+
+#(set-global-staff-size 15)
 
 
 \book {
-
+    \paper { print-all-headers = ##t }
     \header {
-        title       = "Gruppi con Varianti"
-        subtitle    = "terzine, quartine, sestine"
-        composer    = ""
-        enteredby   = "gos95"
-        tagline     = ""
+        title    = \markup {\larger "ESERCIZI GIORNALIERI"}
+        subtitle = "di Articolazione ed Arpeggio"
+        tagline  = ##f
     }
+	\markup { \vspace #1 }
 
+
+    % -------------------------------------------------------------------------------------------------------------------
+    %   ARTICOLAZIONE - TERZINE CON VARIANTI
+    % -------------------------------------------------------------------------------------------------------------------   
+    \score {
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+		<<
+            \set PianoStaff.instrumentName = \markup { "1" }
+            \new Staff = "treble" << \clef violin \articolazioneTerzineUpper >>
+            \new Staff = "bass"   << \clef bass \articolazioneTerzineLower >>
+        >>
+		\header {
+            title    = "ARTICOLAZIONE"
+			subtitle = ##f
+			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
+			piece    = "Articolazione su terzine"
+	    }
+	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
+    }
     \score {
         \new Staff \with {
             \remove "Time_signature_engraver"
             fontSize = #-2
             \override StaffSymbol #'staff-space = #(magstep -2)
             firstClef = ##f
-        } { \terzineVarianti }
-        \header { piece = "Terzine" }
+        } { \articolazioneTerzineVar }
+		\header {
+            title    = ##f
+			subtitle = ##f
+			meter    = ##f
+			piece    = \markup { \bold "         " \smaller { "Varianti:" } }
+	    }
     }
+    % -------------------------------------------------------------------------------------------------------------------
 
+
+	% -------------------------------------------------------------------------------------------------------------------
+    %   ARTICOLAZIONE - QUARTINE CON VARIANTI
+    % -------------------------------------------------------------------------------------------------------------------   
     \score {
-        \new PianoStaff <<
-            \set PianoStaff.instrument = "I"
-            \new Staff = "treble" << 
-                \clef violin
-                \terzineCarmelaUpper
-            >>
-            \new Staff = "bass" <<
-                \clef bass
-                \terzineCarmelaLower
-            >>
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+		<<
+            \set PianoStaff.instrumentName = \markup { "2" }
+            \new Staff = "treble" << \clef violin \articolazioneQuartineAUpper >>
+            \new Staff = "bass"   << \clef bass \articolazioneQuartineALower >>
         >>
-	    \layout {}
-	    \midi { \tempo 4=100 }
+		\header {
+            title    = ##f
+			subtitle = ##f
+			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
+			piece    = "Articolazione su quartine"
+	    }
+	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
     }
-
+    \score {
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+		<<
+            \set PianoStaff.instrumentName = \markup { "3" }
+            \new Staff = "treble" << \clef violin \articolazioneQuartineBUpper >>
+            \new Staff = "bass"   << \clef bass \articolazioneQuartineBLower >>
+        >>
+		\header {
+            title    = ##f
+			subtitle = ##f
+			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
+			piece    = ##f
+	    }
+	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
+    }
     \score {
         \new Staff \with {
             \remove "Time_signature_engraver"
             fontSize = #-2
             \override StaffSymbol #'staff-space = #(magstep -2)
             firstClef = ##f
-        } { \quartineVarianti }
-        \header { piece = "Quartine" }
+        } { \articolazioneQuartineVar }
+		\header {
+            title    = ##f
+			subtitle = ##f
+			meter    = ##f
+			piece    = \markup { \bold "         " \smaller { "Varianti:" } }
+	    }
     }
+    % -------------------------------------------------------------------------------------------------------------------
 
-    \score {
-        \new PianoStaff <<
-            \set PianoStaff.instrument = "II"
-            \new Staff = "treble" << 
-                \clef violin
-                \quartineCarmelaAUpper
+
+    % -------------------------------------------------------------------------------------------------------------------
+    %   ARPEGGGIO - ESTESO - 2 OTTAVE
+    % -------------------------------------------------------------------------------------------------------------------
+	\score {
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+		 <<
+            \set PianoStaff.instrumentName = \markup { "4" }
+            \new Staff = "treble"
+			<<
+                \clef violin \relative c'' \arpeggioEstesoDueOttave
             >>
-            \new Staff = "bass" <<
-                \clef bass
-                \quartineCarmelaALower
+            \new Staff = "bass"
+			<<
+                \clef bass \relative c \arpeggioEstesoDueOttave
             >>
         >>
-	    \layout {}
-	    \midi { \tempo 4=100 }
+		\header {
+            title    = "ARPEGGIO"
+			subtitle = ##f
+			opus     = \markup { \bold \smaller { (\note #"4"#1 = 160) } }
+			piece    = "Arpeggio esteso, su 2 ottave"
+	    }
+	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 160 4) } }
     }
-
-    \score {
-        \new PianoStaff <<
-            \set PianoStaff.instrument = "III"
-            \new Staff = "treble" << 
-                \clef violin
-                \quartineCarmelaBUpper
-            >>
-            \new Staff = "bass" <<
-                \clef bass
-                \quartineCarmelaBLower
-            >>
-        >>
-	    \layout {}
-	    \midi { \tempo 4=100 }
-    }
-
     \score {
         \new Staff \with {
             \remove "Time_signature_engraver"
-            fontSize = #-2
+            fontSize = #-3
             \override StaffSymbol #'staff-space = #(magstep -2)
             firstClef = ##f
-        } { \sestineVarianti }
-        \header { piece = "Sestine" }
+        } { \arpeggioEstesoDueOttaveVar }
+		\header {
+            title    = ##f
+			subtitle = ##f
+			meter    = ##f
+			piece    = \markup { \bold "         " \smaller { "Varianti:" } }
+	    }
     }
-
-    \score {
-        \new PianoStaff <<
-            \set PianoStaff.instrument = "IV"
-            \new Staff = "treble" << 
-                \clef violin
-                \sestineUpper
-            >>
-            \new Staff = "bass" <<
-                \clef bass
-                \sestineLower
-            >>
-        >>
-	    \layout {}
-	    \midi { \tempo 4=100 }
-    }
-
+    % -------------------------------------------------------------------------------------------------------------------
 }

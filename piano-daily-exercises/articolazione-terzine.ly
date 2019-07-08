@@ -1,4 +1,4 @@
-terzineCarmelaUpper = \relative c'' {
+articolazioneTerzineUpper = \relative c'' {
     \time 2/4
     \times 2/3 { c16-2-1[ e-4-3 d-3-2 ] } \override TupletNumber #'transparent = ##t 
                   \times 2/3 { f-5-4[ c-2-1 e-4-3 ] } \times 2/3 { d[ f c ] } \times 2/3 { e[ d f ] }
@@ -9,7 +9,7 @@ terzineCarmelaUpper = \relative c'' {
     \times 2/3 {   c[ d e ] } \times 2/3 { f[ c d ] } \times 2/3 { e[ f c ] } \times 2/3 { d[ e f ] }
     \bar "|."
 }
-terzineCarmelaLower = \relative c {
+articolazioneTerzineLower = \relative c {
     \time 2/4
     \override TupletNumber #'transparent = ##t
     \times 2/3 { c16-2-1[ a-4-3 b-3-2 ] }
@@ -20,4 +20,31 @@ terzineCarmelaLower = \relative c {
     \times 2/3 {   a[ c g ] } \times 2/3 { b[ a c ] } \times 2/3 { g[ b a ] } \times 2/3 { c[ g b ] }
     \times 2/3 {   c[ b a ] } \times 2/3 { g[ c b ] } \times 2/3 { a[ g c ] } \times 2/3 { b[ a g ] }
     \bar "|."
+}
+
+articolazioneTerzineVar = \relative c' {
+    \cadenzaOn
+    \stopStaff
+    \skip 1
+    \startStaff
+        c8[ c16 c16]
+    \stopStaff
+    \skip 1
+    \startStaff
+        c16[ c8 c16]
+    \stopStaff
+    \skip 1
+    \startStaff
+        c16[ c16 c8]
+    \stopStaff
+    \skip 1
+    \startStaff
+        c8[ c8 c8] c16[ c16 c16]]
+    \stopStaff
+    \skip 1
+    \startStaff
+        c16[ c16 c16] c8[ c8 c8]]
+    \stopStaff
+    \skip 1
+    \cadenzaOff
 }
