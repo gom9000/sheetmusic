@@ -35,7 +35,7 @@
             title    = "ARTICOLAZIONE"
 			subtitle = ##f
 			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
-			piece    = "Articolazione su terzine"
+			piece    = "Articolazione delle dita su terzine"
 	    }
 	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
@@ -71,7 +71,7 @@
             title    = ##f
 			subtitle = ##f
 			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
-			piece    = "Articolazione su quartine"
+			piece    = "Articolazione delle dita su quartine"
 	    }
 	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
@@ -129,7 +129,7 @@
             title    = "ARPEGGIO"
 			subtitle = ##f
 			opus     = \markup { \bold \smaller { (\note #"4"#1 = 160) } }
-			piece    = "Arpeggio esteso, su 2 ottave"
+			piece    = "Arpeggi estesi in chiave progressiva, nella estensione di 2 ottave"
 	    }
 	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 160 4) } }
