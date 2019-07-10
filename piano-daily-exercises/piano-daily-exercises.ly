@@ -25,6 +25,21 @@
     %   ARTICOLAZIONE - TERZINE CON VARIANTI
     % -------------------------------------------------------------------------------------------------------------------   
     \score {
+        \new Staff \with {
+            \remove "Time_signature_engraver"
+            fontSize = #-2
+            \override StaffSymbol #'staff-space = #(magstep -2)
+            firstClef = ##f
+        } << \articolazioneTerzineVar >>
+		\header {
+            title    = "ARTICOLAZIONE"
+			subtitle = ##f
+			piece    =  \markup { \column { "Articolazione delle dita su terzine" \null } }
+	    }
+	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 144 8) } }
+    }
+    \score {
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
 		<<
             \set PianoStaff.instrumentName = \markup { "1" }
@@ -32,26 +47,10 @@
             \new Staff = "bass"   << \clef bass \articolazioneTerzineLower >>
         >>
 		\header {
-            title    = "ARTICOLAZIONE"
-			subtitle = ##f
-			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
-			piece    = "Articolazione delle dita su terzine"
-	    }
-	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
-    }
-    \score {
-        \new Staff \with {
-            \remove "Time_signature_engraver"
-            fontSize = #-2
-            \override StaffSymbol #'staff-space = #(magstep -2)
-            firstClef = ##f
-        } { \articolazioneTerzineVar }
-		\header {
             title    = ##f
 			subtitle = ##f
-			meter    = ##f
-			piece    = \markup { \bold "         " \smaller { "Varianti:" } }
+			opus     = \markup { \bold \smaller { (\note #"8"#1 = 144) } }
+			piece    = ##f
 	    }
     }
     % -------------------------------------------------------------------------------------------------------------------
@@ -60,6 +59,19 @@
 	% -------------------------------------------------------------------------------------------------------------------
     %   ARTICOLAZIONE - QUARTINE CON VARIANTI
     % -------------------------------------------------------------------------------------------------------------------   
+    \score {
+        \new Staff \with {
+            \remove "Time_signature_engraver"
+            fontSize = #-2
+            \override StaffSymbol #'staff-space = #(magstep -2)
+            firstClef = ##f
+        } { \articolazioneQuartineVar }
+		\header {
+            title    = ##f
+			subtitle = ##f
+			piece    = \markup { \column { "Articolazione delle dita su quartine" \null } }
+	    }
+    }
     \score {
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
 		<<
@@ -70,11 +82,11 @@
 		\header {
             title    = ##f
 			subtitle = ##f
-			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
-			piece    = "Articolazione delle dita su quartine"
+			opus     = \markup { \bold \smaller { (\note #"4"#1 = 144) } }
+			piece    = \markup { \column { \null \null } }
 	    }
 	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 144 4) } }
     }
     \score {
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
@@ -86,25 +98,11 @@
 		\header {
             title    = ##f
 			subtitle = ##f
-			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
-			piece    = ##f
+			opus     = \markup { \bold \smaller { (\note #"4"#1 = 144) } }
+			piece    = \markup { \column { \null \null } }
 	    }
 	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
-    }
-    \score {
-        \new Staff \with {
-            \remove "Time_signature_engraver"
-            fontSize = #-2
-            \override StaffSymbol #'staff-space = #(magstep -2)
-            firstClef = ##f
-        } { \articolazioneQuartineVar }
-		\header {
-            title    = ##f
-			subtitle = ##f
-			meter    = ##f
-			piece    = \markup { \bold "         " \smaller { "Varianti:" } }
-	    }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 144 4) } }
     }
     % -------------------------------------------------------------------------------------------------------------------
 
@@ -128,25 +126,12 @@
 		\header {
             title    = "ARPEGGIO"
 			subtitle = ##f
-			opus     = \markup { \bold \smaller { (\note #"4"#1 = 160) } }
-			piece    = "Arpeggi estesi in chiave progressiva, nella estensione di 2 ottave"
+			opus     = \markup { \bold \smaller { (\note #"4"#1 = 144) } }
+			piece    = \markup { \column { "Arpeggi estesi in chiave progressiva, nella estensione di 2 ottave" \null } }
+%			piece    = "Arpeggi estesi in chiave progressiva, nella estensione di 2 ottave"
 	    }
 	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 160 4) } }
-    }
-    \score {
-        \new Staff \with {
-            \remove "Time_signature_engraver"
-            fontSize = #-3
-            \override StaffSymbol #'staff-space = #(magstep -2)
-            firstClef = ##f
-        } { \arpeggioEstesoDueOttaveVar }
-		\header {
-            title    = ##f
-			subtitle = ##f
-			meter    = ##f
-			piece    = \markup { \bold "         " \smaller { "Varianti:" } }
-	    }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 144 4) } }
     }
     % -------------------------------------------------------------------------------------------------------------------
 }
