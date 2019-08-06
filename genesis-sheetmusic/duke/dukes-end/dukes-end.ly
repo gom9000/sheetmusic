@@ -6,7 +6,7 @@
 %                                                      INTERLUDIO
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
-synthInterludio = \relative c'' {
+fluteInterludio = \relative c'' {
     <g c ees>4		r4		<g c ees>4		r4
 	<f c' d>4		g4		<f c' d>4		r4
 	<f bes d>4		g4		<f bes d>4		<ees aes c>4~
@@ -18,10 +18,7 @@ synthInterludio = \relative c'' {
 	<f bes d>4		g4		<f bes d>4		d4
 	
 }
-pianoUpperInterludio = \relative c'' {
-    r1 r1 r1 r1		r1 r1 r1 r1
-}
-pianoLowerInterludio = \relative c'' {
+restInterludio = \relative c'' {
     r1 r1 r1 r1		r1 r1 r1 r1
 }
 % -----------------------------------------------------------------------------------------------------------------------
@@ -29,7 +26,7 @@ pianoLowerInterludio = \relative c'' {
 %                                                      TEMA BEHIND THE LINE
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
-synthIntroA = \relative c'' {
+synthBTLA = \relative c'' {
     r2								r8	<g c e>4.
 	<f c' d>4			<g c e>2.
 
@@ -42,7 +39,7 @@ synthIntroA = \relative c'' {
     r2								r8	<g c e>4.
 	<f c' d>4			<g c e>2.
 }
-pianoUpperIntroA = \relative c'' {
+pianoUpperBTLA = \relative c'' {
     r2								r8	<g c e g>4.
 	<f c' d f>4			<g c e g>2.
 
@@ -55,11 +52,13 @@ pianoUpperIntroA = \relative c'' {
     r2								r8	<g c e g>4.
 	<f c' d f>4			<g c e g>2.
 }
-pianoLowerIntroA = \relative c {
+pianoLowerBTLA = \relative c {
     r1	r1				c2 r2	r1			c2 r2	r1			c2 r2	r1
 }
-
-synthIntroAb = \relative c'' {
+restBTLA = \relative c {
+    r1	r1				r1	r1				r1	r1				r1	r1
+}
+synthBTLAb = \relative c'' {
     r2								r8	<g c e>4.
 	<f c' d>4			<g c e>2.
 
@@ -72,7 +71,7 @@ synthIntroAb = \relative c'' {
     r2								r8	<a c f>4.
 	<g c e>4			<f bes d>2.
 }
-pianoUpperIntroAb = \relative c'' {
+pianoUpperBTLAb = \relative c'' {
     r2								r8	<g c e g>4.
 	<f c' d f>4			<g c e g>2.
 
@@ -85,12 +84,14 @@ pianoUpperIntroAb = \relative c'' {
     r2								r8	<a c f a>4.
 	<g c e g>4			<f bes d f>2.
 }
-pianoLowerIntroAb = \relative c {
+pianoLowerBTLAb = \relative c {
     c2 r2	r1			c2 r2	r1			c2 r2	r1			c2 r2	r1
 }
+restBTLAb = \relative c {
+    r1	r1				r1	r1				r1	r1				r1	r1
+}
 
-
-synthIntroB = \relative c'' {
+synthBTLB = \relative c'' {
     <d fis a>4		<d e g>8	<d fis a>8~	<d fis a>2
 	r1
 	r1
@@ -106,7 +107,26 @@ synthIntroB = \relative c'' {
 
 	\time 4/4
 }
-pianoUpperIntroB = \relative c'' {
+temaBTLB = \relative c''' {
+    r1
+	<g, b d>4	<a cis e>4	<a d fis>4	<b d g>4
+	<a cis e>2. r4
+
+	r1
+	r1
+	<g b d>4	<a cis e>4		<b d g>2
+	\time 2/4
+	<a d fis>4	<a cis e>4
+
+	\time 3/4
+	<b d fis>4		<b cis e>8	<b d fis>8~	<b d fis>4
+	<g b d>4		<g a cis>8	<g b d>8~	<g b d>4
+	<a d fis>4		<a cis e>8	<a d fis>8~	<a d fis>4
+	<d fis a>4		<d e g>8	<d fis a>8~	<d fis a>4
+
+	\time 4/4
+}
+pianoUpperBTLB = \relative c'' {
     <d fis a>4		<d e g>8	<d fis a>8~	<d fis a>2
 	<g, b d>4	<a cis e>4	<a d fis>4	<b d g>4
 	<a cis e>2. r4
@@ -125,22 +145,19 @@ pianoUpperIntroB = \relative c'' {
 
 	\time 4/4
 }
-pianoLowerIntroB = \relative c'' {
+restBTLB = \relative c'' {
     r1
-	<g, b d>4	<a cis e>4	<a d fis>4	<b d g>4
-	<a cis e>2. r4
+	r1
+	r1
 
 	r1
 	r1
-	<g b d>4	<a cis e>4		<b d g>2
+	r1
 	\time 2/4
-	<a d fis>4	<a cis e>4
+	r2
 
 	\time 3/4
-	<b d fis>4		<b cis e>8	<b d fis>8~	<b d fis>4
-	<g b d>4		<g a cis>8	<g b d>8~	<g b d>4
-	<a d fis>4		<a cis e>8	<a d fis>8~	<a d fis>4
-	<d fis a>4		<d e g>8	<d fis a>8~	<d fis a>4
+	r2. r2. r2. r2.
 
 	\time 4/4
 }
@@ -218,7 +235,7 @@ finaleBridgeB =  {
 	<gis b e>4 r8 	<gis b e>4.		r4
 }
 
-synthFinaleBridgeC = \relative c' {
+synthFinaleBridgeC = \relative c'' {
   <a c f>4 r8 	<a c f>4.		<f a d>4
   \time 3/4  <a c e>4   r8		<a d f>4 		r8	
   \time 4/4 <b e g>1
@@ -259,16 +276,16 @@ synthPart = {
     \clef violin
 
 	% INTERLUDIO
-    \time 4/4 r1 ^\markup { \tiny {e-flute} }
-	\synthInterludio
+    \time 4/4 r1 ^\markup { \tiny {e-brass} }
+	\restInterludio
     \bar "||"
 	\break
 
 	% TEMA BEHIND THE LINE
-	r1 ^\markup { \tiny {e-brass} } r1
-	\synthIntroA
-	\synthIntroAb
-	\synthIntroB
+	r1 r1
+	\synthBTLA
+	\synthBTLAb
+	\synthBTLB
 	\synthBridge
 	\bar "||"
 	\break
@@ -288,20 +305,42 @@ synthPart = {
 	\bar "|."
 }
 
-pianoUpperPart = {
+organPart = {
     \clef violin
 
 	% INTERLUDIO
-    \time 4/4 r1 ^\markup { \tiny {e-piano} }
-	\pianoUpperInterludio
+    \time 4/4 r1 ^\markup { \tiny {00.8000.000} }
+	\fluteInterludio
     \bar "||"
 	\break
 
     % TEMA BEHIND THE LINE
 	r1 r1
-	\pianoUpperIntroA \break
-	\pianoUpperIntroAb \break
-	\pianoUpperIntroB
+	\restBTLA
+	\restBTLAb
+	\temaBTLB
+	\pianoLowerBridge
+	\bar "||"
+	\break
+
+	% TEMA TURN IT ON AGAIN
+	% FINALE
+}
+
+pianoUpperPart = {
+    \clef violin
+
+	% INTERLUDIO
+    \time 4/4 r1 ^\markup { \tiny {e-piano} }
+	\restInterludio
+    \bar "||"
+	\break
+
+    % TEMA BEHIND THE LINE
+	r1 r1
+	\pianoUpperBTLA \break
+	\pianoUpperBTLAb \break
+	\pianoUpperBTLB
 	\pianoUpperBridge
 	\bar "||"
 	\break
@@ -327,15 +366,15 @@ pianoLowerPart = {
 
 	% INTERLUDIO
     \time 4/4 r1
-	\pianoLowerInterludio
+	\restInterludio
     \bar "||"
 	\break
 
     % TEMA BEHIND THE LINE
 	r1 r1
-	\pianoLowerIntroA
-	\pianoLowerIntroAb
-	\pianoLowerIntroB
+	\pianoLowerBTLA
+	\pianoLowerBTLAb
+	\restBTLB
 	\pianoLowerBridge
 	\bar "||"
 	\break
@@ -369,6 +408,11 @@ pianoLowerPart = {
         <<
             \set Staff.instrumentName = \markup { "Synth" }
             \synthPart
+        >>
+        \new Staff = "Organ" \with { midiInstrument = #"reed organ" }
+        <<
+            \set Staff.instrumentName = \markup { "Organ" }
+            \organPart
         >>
         \new PianoStaff = "EPiano" \with { midiInstrument = #"electric grand" }
         <<
