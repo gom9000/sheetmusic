@@ -9,6 +9,7 @@ arpeggioEstesoDueOttave = {
 	\key cis \major		cis eis gis cis			eis gis cis gis			eis cis gis eis
 	\key d \major		d fis a d				fis a d a 				fis	d a fis
 	\key ees \major		ees g bes ees			g bes ees bes			g ees bes g
+	\key e \major		e gis b e				gis b e b				gis e b gis
 	\key f \major		f a c f					a c f c					a f c a
 	\key fis \major		fis ais cis fis			ais cis fis cis			ais fis cis ais
 	\key g \major		g b d g					b d g d					b g d b
@@ -21,15 +22,24 @@ arpeggioEstesoDueOttave = {
 
 	\key c \major		c e g c					e g b fis				dis b fis dis
 	\key bes \major		bes d f bes				d f  a e				cis a e cis
-	\key a \major		a cis e a				cis e aes ees			c aes ees c
 	\key aes \major		aes c ees aes			c ees g d				b g d b
-	\key g \major		g b d g					b d fis cis				ais fis cis ais
 	\key fis \major		fis ais cis fis			ais cis f c				a f c a
-	\key f \major		f a c f					a c ees bes				g ees bes g
-	\key ees \major		ees g bes ees			g bes d a 				fis	d a fis
+    \key e \major		e gis b e				gis b ees bes			g ees bes g
 	\key d \major		d fis a d				fis a cis gis			eis cis gis eis
-	\key cis \major		cis eis gis cis			eis gis c g				e c g e
+	\key c \major		c e g c					e g c g					e c g e
 	\key c \major		c2.
+
+%	\key c \major		c e g c					e g b fis				dis b fis dis
+%	\key bes \major		bes d f bes				d f  a e				cis a e cis
+%	\key a \major		a cis e a				cis e aes ees			c aes ees c
+%	\key aes \major		aes c ees aes			c ees g d				b g d b
+%	\key g \major		g b d g					b d fis cis				ais fis cis ais
+%	\key fis \major		fis ais cis fis			ais cis f c				a f c a
+%	\key f \major		f a c f					a c ees bes				g ees bes g
+%	\key ees \major		ees g bes ees			g bes d a 				fis	d a fis
+%	\key d \major		d fis a d				fis a cis gis			eis cis gis eis
+%	\key cis \major		cis eis gis cis			eis gis c g				e c g e
+%	\key c \major		c2.
 	
     \bar "|."
 }
