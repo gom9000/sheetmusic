@@ -148,7 +148,8 @@ pianoUpperIntroBridgeA = \relative c'' {
 	<a d fis>4		<a cis e>8	<a d fis>8~	<a d fis>4
 	<d fis a>4		<d e g>8	<d fis a>8~	<d fis a>4
 }
-pianoLowerIntroBridgeA = \relative c'' {
+
+organIntroBridgeA = \relative c''' {
     r1
 	<g, b d>4	<a cis e>4	<a d fis>4	<b d g>4
 	<a cis e>2. r4
@@ -233,18 +234,26 @@ pianoLowerIntroBridgeC = \relative c' {
 }
 
 synthIntroBridgeD = \relative c'' {
-    r2 ^\markup { \tiny {synth flute} } a'4 g 									
-	fis d e2
-	fis2 a4 g
-	fis d e g
+    r1 r1 r1 r1 r1 r1
 
-	fis d a2 r1
-	<b d fis>1		^\markup { \tiny {synth brass/saw} }
+	<b d fis>1
 
 	<gis b e>2~ <gis b e>8		<fis b d>4.
 	<gis b e>2~ <gis b e>8		<fis b d>4.
 
 	<a c f>1~ \time 3/4 <a c f>2. \time 4/4
+}
+organIntroBridgeD = \relative c'' {
+    r2 a'4 g 									
+	fis d e2
+	fis2 a4 g
+	fis d e g
+
+	fis d a2 r1
+	r1
+
+    r1 r1
+	r1 \time 3/4 r2. \time 4/4
 }
 pianoUpperIntroBridgeD = \relative c'' {
     <a d fis>2~ <a d fis>8		<g c e>4.
@@ -329,7 +338,7 @@ pianoLowerIntroBridgeF = \relative c {
 %                                                      TEMA CANTATO
 % -----------------------------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------------------
-synthCantatoA = \relative c'' {
+restCantatoA = \relative c'' {
     r1 r1 r1 r1 r1 r1 r1 r1
 }
 pianoUpperCantatoA = \relative c'' {
@@ -415,9 +424,29 @@ synthPart = {
 
 	% TEMA CANTATO
 	\repeat volta 2 {
-	    \synthCantatoA
+	    \restCantatoA
 	}
-	\synthCantatoA
+	\restCantatoA
+}
+
+organPart = {
+    \clef violin
+
+    \time 4/4 r1
+    \bar "||"
+
+    % INTRO
+	r1 r1 r1 r1 r1 r1 r1 r1 	r1 r1 r1 r1 r1 r1 r1 r1		 r1 r1 r1 r1 r1 r1 r1 r1		r1 r1 r1 r1 r1 r1 r1 r1
+	\organIntroBridgeA \pianoLowerIntroBridgeB
+	r1 r1 r1 r1 \organIntroBridgeD
+	r1 r1 r1 r1 r1 r1 r1 r1		r1 r1 r1 r1 r1 r1 r1 r1
+	\break
+
+	% TEMA CANTATO
+	\repeat volta 2 {
+	    \restCantatoA
+	}
+	\restCantatoA
 }
 
 pianoUpperPart = {
@@ -450,7 +479,7 @@ pianoLowerPart = {
 
     % INTRO
 	\pianoLowerIntroA \pianoLowerIntroB \pianoLowerIntroA \pianoLowerIntroB
-	\pianoLowerIntroBridgeA \pianoLowerIntroBridgeB
+	r1 r1 r1 r1 r1 r1 \time 2/4 r2 \time 3/4 r2. r2. r2. r2. \time 4/4 r1 r1 \time 2/4 r2 \time 3/4 r2. r2. r2. r2.     \pianoLowerIntroBridgeB
 	\pianoLowerIntroBridgeC \pianoLowerIntroBridgeD
 	\pianoLowerIntroA \pianoLowerIntroBridgeF
 	\break
@@ -488,9 +517,14 @@ pianoLowerPart = {
             \set Staff.instrumentName = \markup { "Synth" }
             \synthPart
         >>
+        \new Staff = "Organ" \with { midiInstrument = #"reed organ" }
+        <<
+            \set Staff.instrumentName = \markup { "Organ" }
+            \organPart
+        >>
         \new PianoStaff = "EPiano" \with { midiInstrument = #"electric grand" }
         <<
-            \set PianoStaff.instrumentName = \markup { "EPiano" }
+            \set PianoStaff.instrumentName = \markup { "Piano" }
             \new Staff = upper \pianoUpperPart
 			\new Staff = upper \pianoLowerPart
         >>

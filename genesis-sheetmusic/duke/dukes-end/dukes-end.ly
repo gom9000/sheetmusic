@@ -416,7 +416,7 @@ pianoLowerPart = {
         >>
         \new PianoStaff = "EPiano" \with { midiInstrument = #"electric grand" }
         <<
-            \set PianoStaff.instrumentName = \markup { "EPiano" }
+            \set PianoStaff.instrumentName = \markup { "Piano" }
             \new Staff = upper \pianoUpperPart
 			\new Staff = upper \pianoLowerPart
         >>
