@@ -8,19 +8,9 @@ marcettaUpper = \relative c'' {
 	d2.						f4
 	a2.						g4
 	e2.						r4
-
-    g2.						f4
-	d2.						f4
-	a2.						g4
-	e2.						r4
-    \break
+	\break
 
 	% tema
-    g2.						f4
-	d2.						f4
-	a2.						g4
-	e2.						r4
-
     g2.						f4
 	d2.						f4
 	a2.						g4
@@ -47,14 +37,10 @@ marcettaUpper = \relative c'' {
 	d1~
 	d1
 
-    d,2.					f4
-	a2.						g4
-	e2.						g4
-	bes2.					a4
     \break
 
 	% finale
-    g2.						f4
+    g,2.					f4
 	d2.						f4
 	a2.						g4
 	e2.						r4
@@ -74,14 +60,7 @@ marcettaLower = \relative c {
 	% intro
     r1	r1	r1	r1
 
-    r1	r1	r1	r1
-
 	% tema
-	g8 g8 g16 g8. g8 r4.
-	d8 d8 d16 d8. d8 r4.
-	a'8 a8 a16 a8. a8 r4.
-	e8 e8 e16 e8. e8 r4.
-
 	g8 g8 g16 g8. g8 r4.
 	d8 d8 d16 d8. d8 r4.
 	a'8 a8 a16 a8. a8 r4.
@@ -105,11 +84,6 @@ marcettaLower = \relative c {
 	bes8 bes8 bes16 bes8. bes8 r4.
 	d,8 d8 d16 d8. d8 r4.
 	d8 d8 d16 d8. d8 r4.
-
-	d8 d8 d16 d8. d8 r4.
-	a'8 a8 a16 a8. a8 r4.
-	e8 e8 e16 e8. e8 r4.
-	bes'8 bes8 bes16 bes8. bes8 r4.
 
 	% finale
 	r1	r1	r1	r1

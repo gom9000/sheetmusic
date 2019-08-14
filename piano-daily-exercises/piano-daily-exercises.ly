@@ -6,6 +6,7 @@
 \include "articolazione-terzine.ly"
 \include "articolazione-quartine.ly"
 \include "arpeggio-esteso-2-ottave.ly"
+\include "arpeggio-accordi-2-ottave.ly"
 
 
 #(set-global-staff-size 15)
@@ -37,7 +38,7 @@
 			piece    =  \markup { \column { "Articolazione delle dita su terzine" \null } }
 	    }
 	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 144 8) } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 8) } }
     }
     \score {
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
@@ -49,7 +50,7 @@
 		\header {
             title    = ##f
 			subtitle = ##f
-			opus     = \markup { \bold \smaller { (\note #"8"#1 = 144) } }
+			opus     = \markup { \bold \smaller { (\note #"8"#1 = 120) } }
 			piece    = ##f
 	    }
     }
@@ -82,11 +83,11 @@
 		\header {
             title    = ##f
 			subtitle = ##f
-			opus     = \markup { \bold \smaller { (\note #"4"#1 = 144) } }
+			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
 			piece    = \markup { \column { \null \null } }
 	    }
 	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 144 4) } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
     }
     \score {
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
@@ -98,14 +99,15 @@
 		\header {
             title    = ##f
 			subtitle = ##f
-			opus     = \markup { \bold \smaller { (\note #"4"#1 = 144) } }
+			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
 			piece    = \markup { \column { \null \null } }
 	    }
 	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 144 4) } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
     }
     % -------------------------------------------------------------------------------------------------------------------
 
+	\pageBreak
 
     % -------------------------------------------------------------------------------------------------------------------
     %   ARPEGGGIO - ESTESO - 2 OTTAVE
@@ -114,24 +116,40 @@
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
 		 <<
             \set PianoStaff.instrumentName = \markup { "4" }
-            \new Staff = "treble"
-			<<
-                \clef violin \relative c'' \arpeggioEstesoDueOttave
-            >>
-            \new Staff = "bass"
-			<<
-                \clef bass \relative c \arpeggioEstesoDueOttave
-            >>
+            \new Staff = "treble" << \clef violin \relative c'' \arpeggioEstesoDueOttave >>
+            \new Staff = "bass" << \clef bass \relative c \arpeggioEstesoDueOttave >>
         >>
 		\header {
             title    = "ARPEGGIO"
 			subtitle = ##f
-			opus     = \markup { \bold \smaller { (\note #"4"#1 = 144) } }
-			piece    = \markup { \column { "Arpeggi estesi in chiave progressiva, nella estensione di 2 ottave" \null } }
-%			piece    = "Arpeggi estesi in chiave progressiva, nella estensione di 2 ottave"
+			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
+			piece    = \markup { \column { "Arpeggi estesi in chiavi progressive, nella estensione di 2 ottave" \null } }
 	    }
 	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 144 4) } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
+    }
+    % -------------------------------------------------------------------------------------------------------------------
+
+	\pageBreak
+
+    % -------------------------------------------------------------------------------------------------------------------
+    %   ARPEGGGIO - ACCORDI - 2 OTTAVE
+    % -------------------------------------------------------------------------------------------------------------------
+	\score {
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+		 <<
+            \set PianoStaff.instrumentName = \markup { "5" }
+            \new Staff = "treble" << \clef violin \relative c' \arpeggioAccordiDueOttave >>
+            \new Staff = "bass" << \clef bass \relative c, \arpeggioAccordiDueOttave >>
+        >>
+		\header {
+            title    = ##f
+			subtitle = ##f
+			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
+			piece    = \markup { \column { "Arpeggi di accordi in chiavi progressive, nella estensione di 2 ottave" \null } }
+	    }
+	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
     }
     % -------------------------------------------------------------------------------------------------------------------
 }

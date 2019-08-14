@@ -4,16 +4,17 @@
 
 % INCLUDES
 \include "primi-pezzi-marcetta.ly"
+\include "primi-pezzi-xxx.ly"
 
 
-#(set-global-staff-size 18)
+#(set-global-staff-size 20)
 
 
 \book {
     \paper { print-all-headers = ##t }
     \header {
         title    = \markup {\larger "PRIMI PEZZI"}
-        subtitle = "raccolta dei primi pezzi"
+        subtitle = "raccolta di primi pezzi"
 		composer = "gos95"
         tagline  = ##f
     }
@@ -39,4 +40,27 @@
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 92 4) } }
     }
     % -------------------------------------------------------------------------------------------------------------------
+
+	\pageBreak
+
+    % -------------------------------------------------------------------------------------------------------------------
+    %   
+    % -------------------------------------------------------------------------------------------------------------------   
+    \score {
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+		<<
+            \set PianoStaff.instrumentName = \markup { "2" }
+            \new Staff = "treble" << \xxxUpper >>
+            \new Staff = "bass"   << \xxxLower >>
+        >>
+		\header {
+		    title    = ##f
+		    subtitle = "Marcetta"
+			composer = ##f
+			meter    = \markup { \italic "                Allegretto" }
+	    }
+		\layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 132 8) } }
+    }
+    % -------------------------------------------------------------------------------------------------------------------	
 }
