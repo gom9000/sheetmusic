@@ -1,7 +1,7 @@
-marcettaUpper = \relative c'' {
+unoUpper = \relative c'' {
     \clef violin
     \time 4/4
-    \key f \major	
+    \key d \minor
 
 	% intro
     g2.						f4
@@ -52,10 +52,10 @@ marcettaUpper = \relative c'' {
 
     \bar "|."
 }
-marcettaLower = \relative c {
+unoLower = \relative c {
     \clef bass
     \time 4/4
-	\key f \major
+	\key d \minor
 
 	% intro
     r1	r1	r1	r1

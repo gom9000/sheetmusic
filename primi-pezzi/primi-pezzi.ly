@@ -3,64 +3,95 @@
 
 
 % INCLUDES
-\include "primi-pezzi-marcetta.ly"
-\include "primi-pezzi-xxx.ly"
+\include "primi-pezzi-01.ly"
+\include "primi-pezzi-03.ly"
+\include "primi-pezzi-05.ly"
 
 
-#(set-global-staff-size 20)
+#(set-global-staff-size 19)
 
 
 \book {
     \paper { print-all-headers = ##t }
     \header {
-        title    = \markup {\larger "PRIMI PEZZI"}
-        subtitle = "raccolta di primi pezzi"
-		composer = "gos95"
-        tagline  = ##f
+        title       = \markup {\larger "PRIMI PEZZI"}
+        subtitle    = "raccolta di piccoli brani"
+		subsubtitle = "(1989)" %%"scritti al primo anno di lezioni (1989)"
+		composer    = "gos95"
+        tagline     = ##f
     }
 
 
     % -------------------------------------------------------------------------------------------------------------------
-    %   
-    % -------------------------------------------------------------------------------------------------------------------   
+    % Op1 No1 - CANTO
+    % -------------------------------------------------------------------------------------------------------------------
     \score {
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
 		<<
             \set PianoStaff.instrumentName = \markup { "1" }
-            \new Staff = "treble" << \marcettaUpper >>
-            \new Staff = "bass"   << \marcettaLower >>
+            \new Staff = "treble" << \unoUpper >>
+            \new Staff = "bass"   << \unoLower >>
         >>
 		\header {
-		    title    = ##f
-		    subtitle = "Marcetta"
-			composer = ##f
-			meter    = \markup { \italic "                Tempo di marcia" }
+		    title       = ##f
+		    subtitle    = "Canto"
+			subsubtitle = ##f
+			composer    = ##f
+			opus        = "Op.1 No.1"
+			meter       = \markup { \italic "                Andante" }
+	    }
+		\layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 88 4) } }
+    }
+    % -------------------------------------------------------------------------------------------------------------------
+
+%	\pageBreak
+
+    % -------------------------------------------------------------------------------------------------------------------
+    % Op1 No3 - 
+    % -------------------------------------------------------------------------------------------------------------------
+    \score {
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+		<<
+            \set PianoStaff.instrumentName = \markup { "2" }
+            \new Staff = "treble" << \treUpper >>
+            \new Staff = "bass"   << \treLower >>
+        >>
+		\header {
+		    title       = ##f
+		    subtitle    = "Danza"
+			subsubtitle = ##f
+			composer    = ##f
+			opus        = "Op.1 No.3"
+			meter       = \markup { \italic "                Allegretto" }
 	    }
 		\layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 92 4) } }
     }
     % -------------------------------------------------------------------------------------------------------------------
 
-	\pageBreak
+%	\pageBreak
 
     % -------------------------------------------------------------------------------------------------------------------
-    %   
+    % Op1 No5 - 
     % -------------------------------------------------------------------------------------------------------------------   
     \score {
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
 		<<
-            \set PianoStaff.instrumentName = \markup { "2" }
-            \new Staff = "treble" << \xxxUpper >>
-            \new Staff = "bass"   << \xxxLower >>
+            \set PianoStaff.instrumentName = \markup { "3" }
+            \new Staff = "treble" << \cinqueUpper >>
+            \new Staff = "bass"   << \cinqueLower >>
         >>
 		\header {
-		    title    = ##f
-		    subtitle = "Marcetta"
-			composer = ##f
-			meter    = \markup { \italic "                Allegretto" }
+		    title       = ##f
+		    subtitle    = "L'uccellino che vola"
+			subsubtitle = ##f
+			composer    = ##f
+			opus        = "Op.1 No.5"
+			meter       = \markup { \italic "                Allegretto" }
 	    }
 		\layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 132 8) } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 88 4) } }
     }
     % -------------------------------------------------------------------------------------------------------------------	
 }
