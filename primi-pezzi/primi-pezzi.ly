@@ -6,6 +6,7 @@
 \include "primi-pezzi-01.ly"
 \include "primi-pezzi-03.ly"
 \include "primi-pezzi-05.ly"
+\include "primi-pezzi-06.ly"
 
 
 #(set-global-staff-size 19)
@@ -38,7 +39,7 @@
 			subsubtitle = ##f
 			composer    = ##f
 			opus        = "Op.1 No.1"
-			meter       = \markup { \italic "                Andante" }
+			meter       = \markup { \italic "                          Andante" }
 	    }
 		\layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 88 4) } }
@@ -48,7 +49,7 @@
 %	\pageBreak
 
     % -------------------------------------------------------------------------------------------------------------------
-    % Op1 No3 - 
+    % Op1 No3 - Tarantella
     % -------------------------------------------------------------------------------------------------------------------
     \score {
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
@@ -59,11 +60,11 @@
         >>
 		\header {
 		    title       = ##f
-		    subtitle    = "Danza"
+		    subtitle    = "Tarantella"
 			subsubtitle = ##f
 			composer    = ##f
 			opus        = "Op.1 No.3"
-			meter       = \markup { \italic "                Allegretto" }
+			meter       = \markup { \italic "                          Allegretto" }
 	    }
 		\layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 92 4) } }
@@ -73,8 +74,8 @@
 %	\pageBreak
 
     % -------------------------------------------------------------------------------------------------------------------
-    % Op1 No5 - 
-    % -------------------------------------------------------------------------------------------------------------------   
+    % Op1 No5 - Danza del passerotto
+    % -------------------------------------------------------------------------------------------------------------------
     \score {
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
 		<<
@@ -84,14 +85,38 @@
         >>
 		\header {
 		    title       = ##f
-		    subtitle    = "L'uccellino che vola"
+		    subtitle    = "Danza del passerotto"
 			subsubtitle = ##f
 			composer    = ##f
 			opus        = "Op.1 No.5"
-			meter       = \markup { \italic "                Allegretto" }
+			meter       = \markup { \italic "                          Allegretto" }
 	    }
 		\layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 88 4) } }
     }
-    % -------------------------------------------------------------------------------------------------------------------	
+    % -------------------------------------------------------------------------------------------------------------------
+
+
+    % -------------------------------------------------------------------------------------------------------------------
+    % Op1 No6 - Tarantella
+    % -------------------------------------------------------------------------------------------------------------------   
+    \score {
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+		<<
+            \set PianoStaff.instrumentName = \markup { "4" }
+            \new Staff = "treble" << \cinqueUpper >>
+            \new Staff = "bass"   << \cinqueLower >>
+        >>
+		\header {
+		    title       = ##f
+		    subtitle    = "Tarantella"
+			subsubtitle = ##f
+			composer    = ##f
+			opus        = "Op.1 No.6"
+			meter       = \markup { \italic "                          Andante" }
+	    }
+		\layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 80 4) } }
+    }
+    % -------------------------------------------------------------------------------------------------------------------
 }
