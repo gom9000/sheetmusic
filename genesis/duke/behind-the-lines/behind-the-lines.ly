@@ -130,10 +130,10 @@ pianoUpperIntroBridgeA = \relative c'' {
 	<a d fis>4	<a cis e>4
 
 	\time 3/4
-	<b d fis>4		<b cis e>8	<b d fis>8~	<b d fis>4
+	<b d fis>4		<a cis e>8	<b d fis>8~	<b d fis>4
 	<g b d>4		<g a cis>8	<g b d>8~	<g b d>4
-	<a d fis>4		<a cis e>8	<a d fis>8~	<a d fis>4
-	<d fis a>4		<d e g>8	<d fis a>8~	<d fis a>4
+	<a cis fis>4	<g b e>8	<a cis fis>8~	<a cis fis>4
+	<d fis a>4		<b d g>8	<d fis a>8~	<d fis a>4
 
 	\time 4/4
 	<d fis a>4		<d e g>8	<d fis a>8~	<d fis a>2
@@ -143,10 +143,10 @@ pianoUpperIntroBridgeA = \relative c'' {
 	<a d fis>4	<a cis e>4
 
 	\time 3/4
-	<b d fis>4		<b cis e>8	<b d fis>8~	<b d fis>4
+	<b d fis>4		<a cis e>8	<b d fis>8~	<b d fis>4
 	<g b d>4		<g a cis>8	<g b d>8~	<g b d>4
-	<a d fis>4		<a cis e>8	<a d fis>8~	<a d fis>4
-	<d fis a>4		<d e g>8	<d fis a>8~	<d fis a>4
+	<a cis fis>4	<g b e>8	<a cis fis>8~	<a cis fis>4
+	<d fis a>4		<b d g>8	<d fis a>8~	<d fis a>4
 }
 
 organIntroBridgeA = \relative c''' {
@@ -161,10 +161,10 @@ organIntroBridgeA = \relative c''' {
 	<a d fis>4	<a cis e>4
 
 	\time 3/4
-	<b d fis>4		<b cis e>8	<b d fis>8~	<b d fis>4
+	<b d fis>4		<a cis e>8	<b d fis>8~	<b d fis>4
 	<g b d>4		<g a cis>8	<g b d>8~	<g b d>4
-	<a d fis>4		<a cis e>8	<a d fis>8~	<a d fis>4
-	<d fis a>4		<d e g>8	<d fis a>8~	<d fis a>4
+	<a cis fis>4	<g b e>8	<a cis fis>8~	<a cis fis>4
+	<d fis a>4		<b d g>8	<d fis a>8~	<d fis a>4
 
 	\time 4/4
 	r1
@@ -174,10 +174,10 @@ organIntroBridgeA = \relative c''' {
 	<a d fis>4	<a cis e>4
 
 	\time 3/4
-	<b d fis>4		<b cis e>8	<b d fis>8~	<b d fis>4
+	<b d fis>4		<a cis e>8	<b d fis>8~	<b d fis>4
 	<g b d>4		<g a cis>8	<g b d>8~	<g b d>4
-	<a d fis>4		<a cis e>8	<a d fis>8~	<a d fis>4
-	<d fis a>4		<d e g>8	<d fis a>8~	<d fis a>4
+	<a cis fis>4	<g b e>8	<a cis fis>8~	<a cis fis>4
+	<d fis a>4		<b d g>8	<d fis a>8~	<d fis a>4
 }
 
 synthIntroBridgeB = \relative c'' {
@@ -241,7 +241,7 @@ synthIntroBridgeD = \relative c'' {
 	<gis b e>2~ <gis b e>8		<fis b d>4.
 	<gis b e>2~ <gis b e>8		<fis b d>4.
 
-	<a c f>1~ \time 3/4 <a c f>2. \time 4/4
+	<a c f>1~ \time 3/4 <g c e>4. <a c f>4. \time 4/4
 }
 organIntroBridgeD = \relative c'' {
     r2 a'4 g 									
@@ -268,7 +268,7 @@ pianoUpperIntroBridgeD = \relative c'' {
 	<gis b e>2~ <gis b e>8		<fis b d>4.
 	<gis b e>2~ <gis b e>8		<fis b d>4.
 
-	<a c f>1~ \time 3/4 <a c f>2. \time 4/4
+	<a c f>1~ \time 3/4 <g c e>4. <a c f>4. \time 4/4
 }
 pianoLowerIntroBridgeD = \relative c'' {
     r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 \time 3/4 r2. \time 4/4
