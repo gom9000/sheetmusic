@@ -3,7 +3,7 @@ This file contains the todo list of **sheetmusic/genesis** vs **the-banks-side-o
 
 
 ## Next Tasks
-- [ ] the-banks-side-of-the-genesis/nursery-cryme/the-fountain-of-salmacis: fix instruments, ritornelli and layout
+- [ ] the-banks-side-of-the-genesis/nursery-cryme/the-fountain-of-salmacis: fix instruments
 - [ ] the-banks-side-of-the-genesis/selling-england-by-the-pound/after-the-ordeal: fix finale instrument names
 
 - [ ] sheetmusic/genesis/foxtrot/can-utility-and-the-coastliners: write, fix and migrate
