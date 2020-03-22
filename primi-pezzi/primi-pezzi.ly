@@ -3,10 +3,9 @@
 
 
 % INCLUDES
-\include "primi-pezzi-01.ly"
-\include "primi-pezzi-03.ly"
-\include "primi-pezzi-05.ly"
-\include "primi-pezzi-06.ly"
+\include "primi-pezzi-01-canto.ly"
+\include "primi-pezzi-03-tarantella.ly"
+\include "primi-pezzi-05-danza-del-passerotto.ly"
 
 
 #(set-global-staff-size 19)

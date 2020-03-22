@@ -22,8 +22,8 @@ treUpper = \relative c' {
     c4) e8\staccato d4 r8
 
     b4( d8 f8 d8 b8
-    c4) d8 e4 r8
-    b4( f'8\staccato d4 b8
+    c4) d8\staccato e4 r8
+    b4( f'8 d4 b8
     c4) e8\staccato c4 r8
 
 	% coda
@@ -63,7 +63,7 @@ treLower = \relative c {
     g,8( b8 d8)                      g,8( b8 d8)
     \clef violin c8 <e g>8 <e g>8    <c e>8 g'8 g8
     \clef bass g,8 b8 d8             g,8 b8 d8
-    g,8 <c e>8 <c e>8                c,8 g'8 e8
+    g,8 <c e>8 <c e>8                c,8 g'8\staccato e8\staccato
 
 	% coda
 	c8 <e g>8\staccato <e g>8\staccato			c8 <e g>8\staccato <e g>8\staccato
