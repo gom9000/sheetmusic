@@ -1,10 +1,10 @@
 % ===========================================================================================================
-% eleventh-earl-of-mar.ly
-%  _____ _        ___            _       ___ _    _      ___   __ _____ _         ___                 _    
-% |_   _| |_  ___| _ ) __ _ _ _ | |__ __/ __(_)__| |___ / _ \ / _|_   _| |_  ___ / __|___ _ _  ___ __(_)___
-%   | | | ' \/ -_) _ \/ _` | ' \| / /(_-<__ \ / _` / -_) (_) |  _| | | | ' \/ -_) (_ / -_) ' \/ -_|_-< (_-<
-%   |_| |_||_\___|___/\__,_|_||_|_\_\/__/___/_\__,_\___|\___/|_|   |_| |_||_\___|\___\___|_||_\___/__/_/__/
-%                                                                                                          
+% esercizi-di-tecnica.ly
+%  ___ _            _   __  __         _    
+% / __| |_  ___ ___| |_|  \/  |_  _ __(_)__ 
+% \__ \ ' \/ -_) -_)  _| |\/| | || (_-< / _|
+% |___/_||_\___\___|\__|_|  |_|\_,_/__/_\__|
+%
 % Copyright (c) 2020 Alessandro Fraschetti (mail: gos95@gommagomma.net)
 %
 % Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,14 +31,29 @@
 #(ly:set-option 'delete-intermediate-files #t)
 #(set-global-staff-size 15)
 
+%% articolazioni-sestine.ly [A.4]   -- sestine e varianti ritmiche
+%% articolazioni-12-toni.ly [A.5]   -- vitale
+
+%% arpeggi-ottava-maggiori-12-toni.ly [B.1]
+%% arpeggi-ottava-minori-12-toni.ly [B.2]
+%% arpeggi-estesi-minori-12-toni.ly [B.4]
+
+%% accordi-maggiori-12-toni.ly [C.2]
+%% accordi-arpeggi-estesi-maggiori-12-toni.ly [C.4]
+%% accordi-arpeggi-bicordi-maggiori-12-toni.ly [C.5]
+%% accordi-arpeggi-bicordi-minori-12-toni.ly [C.6]
+
+%% terze-xxx
+
 
 % ===========================================================================================================
 % ------------------------------------------  I N C L U D E S  ----------------------------------------------
 % ===========================================================================================================
 \include "articolazione-terzine.ly"
 \include "articolazione-quartine.ly"
-\include "arpeggi-maggiori-12-toni.ly"
+\include "arpeggi-estesi-maggiori-12-toni.ly"
 \include "accordi-maggiori-12-toni.ly"
+\include "accordi-arpeggi-estesi-maggiori-12-toni.ly"
 
 
 % ===========================================================================================================
@@ -67,7 +82,7 @@
 		\header {
             title    = "1 ARTICOLAZIONE"
 			subtitle = ##f
-			piece    =  \markup { \column { "Articolazione delle terzine con varianti ritmiche" \null } }
+			piece    =  \markup { \column { "Articolazione delle 5 dita su terzine e relative varianti ritmiche" \null } }
 	    }
 	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 8) } }
@@ -102,7 +117,7 @@
 		\header {
             title    = ##f
 			subtitle = ##f
-			piece    = \markup { \column { "Articolazione delle quartine con varianti ritmiche" \null } }
+			piece    = \markup { \column { "Articolazione delle 5 dita su quartine e relative varianti ritmiche" \null } }
 	    }
     }
     \score {
@@ -187,8 +202,8 @@
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
 		<<
             \set PianoStaff.instrumentName = \markup { "3.2" }
-            \new Staff = "treble" << \clef violin \relative c' \arpeggiAccordiMaggioriXIIToni >>
-            \new Staff = "bass" << \clef bass \relative c, \arpeggiAccordiMaggioriXIIToni >>
+            \new Staff = "treble" << \clef violin \relative c' \accordiArpeggiEstesiMaggioriXIIToni >>
+            \new Staff = "bass" << \clef bass \relative c, \accordiArpeggiEstesiMaggioriXIIToni >>
         >>
 		\header {
             title    = ##f

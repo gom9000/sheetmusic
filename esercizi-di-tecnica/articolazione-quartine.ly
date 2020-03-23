@@ -53,7 +53,7 @@ articolazioneQuartineVar = \relative c' {
     \stopStaff
     \skip 1
     \startStaff
-        c8[^\markup { \raise #2 { varianti ritmiche: }} c16 c16 c16]
+        c8[^\markup { \raise #2 { varianti ritmiche quartine: }} c16 c16 c16]
     \stopStaff
     \skip 1
     \startStaff
