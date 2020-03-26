@@ -1,9 +1,10 @@
 % ===========================================================================================================
 % esercizi-di-tecnica.ly
-%  ___ _            _   __  __         _    
-% / __| |_  ___ ___| |_|  \/  |_  _ __(_)__ 
-% \__ \ ' \/ -_) -_)  _| |\/| | || (_-< / _|
-% |___/_||_\___\___|\__|_|  |_|\_,_/__/_\__|
+%                     _    _      _ _   _               _         
+%  ___ ___ ___ _ _ __(_)__(_)  __| (_) | |_ ___ __ _ _ (_)__ __ _ 
+% / -_|_-</ -_) '_/ _| |_ / | / _` | | |  _/ -_) _| ' \| / _/ _` |
+% \___/__/\___|_| \__|_/__|_| \__,_|_|  \__\___\__|_||_|_\__\__,_|
+%                           Articolazioni, Arpeggi, Accordi, Terze
 %
 % Copyright (c) 2020 Alessandro Fraschetti (mail: gos95@gommagomma.net)
 %
@@ -31,17 +32,17 @@
 #(ly:set-option 'delete-intermediate-files #t)
 #(set-global-staff-size 15)
 
-%% articolazioni-sestine.ly [A.4]   -- sestine e varianti ritmiche
 %% articolazioni-12-toni.ly [A.5]   -- vitale
 
 %% arpeggi-ottava-maggiori-12-toni.ly [B.1]
-%% arpeggi-ottava-minori-12-toni.ly [B.2]
-%% arpeggi-estesi-minori-12-toni.ly [B.4]
+%% arpeggi-estesi-minori-12-toni.ly [B.3]
+%% arpeggi-estesi-sdim-12-toni.ly [B.4]
 
-%% accordi-maggiori-12-toni.ly [C.2]
-%% accordi-arpeggi-estesi-maggiori-12-toni.ly [C.4]
-%% accordi-arpeggi-bicordi-maggiori-12-toni.ly [C.5]
-%% accordi-arpeggi-bicordi-minori-12-toni.ly [C.6]
+%% accordi-minori-12-toni.ly [C.2]
+%% accordi-arpeggi-estesi-minori-12-toni.ly [C.4]
+%% accordi-arpeggi-estesi-sdim-12-toni.ly [C.5]
+%% accordi-arpeggi-bicordi-maggiori-12-toni.ly [C.6]
+%% accordi-arpeggi-bicordi-minori-12-toni.ly [C.7]
 
 %% terze-xxx
 
@@ -49,9 +50,16 @@
 % ===========================================================================================================
 % ------------------------------------------  I N C L U D E S  ----------------------------------------------
 % ===========================================================================================================
-\include "articolazione-terzine.ly"
-\include "articolazione-quartine.ly"
+\include "varianti-ritmiche-terzine.ly"
+\include "varianti-ritmiche-quartine.ly"
+\include "varianti-ritmiche-sestine.ly"
+
+\include "articolazioni-terzine.ly"
+\include "articolazioni-quartine.ly"
+\include "articolazioni-sestine.ly"
+
 \include "arpeggi-estesi-maggiori-12-toni.ly"
+
 \include "accordi-maggiori-12-toni.ly"
 \include "accordi-arpeggi-estesi-maggiori-12-toni.ly"
 
@@ -63,14 +71,14 @@
     \paper { print-all-headers = ##t }
     \header {
         title    = \markup {\larger "ESERCIZI DI TECNICA"}
-        subtitle = "Articolazione, Arpeggi, Accordi, Terze"
+        subtitle = "Articolazioni, Arpeggi, Accordi, Terze"
         tagline  = ##f
     }
 	\markup { \vspace #1 }
 
 
     % -------------------------------------------------------------------------------------------------------------------
-    %   ARTICOLAZIONE - TERZINE CON VARIANTI
+    %   ARTICOLAZIONI - TERZINE E RELATIVE VARIANTI RITMICHE
     % -------------------------------------------------------------------------------------------------------------------   
     \score {
         \new Staff \with {
@@ -78,11 +86,11 @@
             fontSize = #-2
             \override StaffSymbol #'staff-space = #(magstep -2)
             firstClef = ##f
-        } << \articolazioneTerzineVar >>
+        } << \variantiRitmicheTerzine >>
 		\header {
-            title    = "1 ARTICOLAZIONE"
+            title    = "1 ARTICOLAZIONI"
 			subtitle = ##f
-			piece    =  \markup { \column { "Articolazione delle 5 dita su terzine e relative varianti ritmiche" \null } }
+			piece    =  \markup { \column { "Articolazioni delle 5 dita su terzine e relative varianti ritmiche" \null } }
 	    }
 	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 8) } }
@@ -91,8 +99,8 @@
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
 		<<
             \set PianoStaff.instrumentName = \markup { "1.1" }
-            \new Staff = "treble" << \clef violin \articolazioneTerzineUpper >>
-            \new Staff = "bass"   << \clef bass \articolazioneTerzineLower >>
+            \new Staff = "treble" << \clef violin \articolazioniTerzineUpper >>
+            \new Staff = "bass"   << \clef bass \articolazioniTerzineLower >>
         >>
 		\header {
             title    = ##f
@@ -105,7 +113,7 @@
 
 
 	% -------------------------------------------------------------------------------------------------------------------
-    %   ARTICOLAZIONE - QUARTINE CON VARIANTI
+    %   ARTICOLAZIONI - QUARTINE E RELATIVE VARIANTI RITMICHE
     % -------------------------------------------------------------------------------------------------------------------   
     \score {
         \new Staff \with {
@@ -113,19 +121,19 @@
             fontSize = #-2
             \override StaffSymbol #'staff-space = #(magstep -2)
             firstClef = ##f
-        } { \articolazioneQuartineVar }
+        } { \variantiRitmicheQuartine }
 		\header {
             title    = ##f
 			subtitle = ##f
-			piece    = \markup { \column { "Articolazione delle 5 dita su quartine e relative varianti ritmiche" \null } }
+			piece    = \markup { \column { "Articolazioni delle 5 dita su quartine e relative varianti ritmiche" \null } }
 	    }
     }
     \score {
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
 		<<
             \set PianoStaff.instrumentName = \markup { "1.2" }
-            \new Staff = "treble" << \clef violin \articolazioneQuartineAUpper >>
-            \new Staff = "bass"   << \clef bass \articolazioneQuartineALower >>
+            \new Staff = "treble" << \clef violin \articolazioniQuartineAUpper >>
+            \new Staff = "bass"   << \clef bass \articolazioniQuartineALower >>
         >>
 		\header {
             title    = ##f
@@ -140,8 +148,8 @@
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
 		<<
             \set PianoStaff.instrumentName = \markup { "1.3" }
-            \new Staff = "treble" << \clef violin \articolazioneQuartineBUpper >>
-            \new Staff = "bass"   << \clef bass \articolazioneQuartineBLower >>
+            \new Staff = "treble" << \clef violin \articolazioniQuartineBUpper >>
+            \new Staff = "bass"   << \clef bass \articolazioniQuartineBLower >>
         >>
 		\header {
             title    = ##f
@@ -154,7 +162,46 @@
     }
     % -------------------------------------------------------------------------------------------------------------------
 
+
 	\pageBreak
+
+
+	% -------------------------------------------------------------------------------------------------------------------
+    %   ARTICOLAZIONI - SESTINE E RELATIVE VARIANTI RITMICHE
+    % -------------------------------------------------------------------------------------------------------------------   
+    \score {
+        \new Staff \with {
+            \remove "Time_signature_engraver"
+            fontSize = #-2
+            \override StaffSymbol #'staff-space = #(magstep -3)
+            firstClef = ##f
+        } { \variantiRitmicheSestine }
+		\header {
+            title    = ##f
+			subtitle = ##f
+			piece    = \markup { \column { "Articolazioni delle 5 dita su sestine e relative varianti ritmiche" \null } }
+	    }
+    }
+    \score {
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+		<<
+            \set PianoStaff.instrumentName = \markup { "1.4" }
+            \new Staff = "treble" << \clef violin \articolazioniSestineUpper >>
+            \new Staff = "bass"   << \clef bass \articolazioniSestineLower >>
+        >>
+		\header {
+            title    = ##f
+			subtitle = ##f
+%			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
+			piece    = \markup { \column { \null \null } }
+	    }
+	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
+    }
+
+
+	\pageBreak
+
 
     % -------------------------------------------------------------------------------------------------------------------
     %   ARPEGGGI - MAGGIORI 12 TONI
