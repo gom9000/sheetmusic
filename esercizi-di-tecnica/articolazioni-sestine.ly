@@ -1,5 +1,5 @@
 % ===========================================================================================================
-% articolazioni-terzine.ly
+% articolazioni-sestine.ly
 %                     _    _      _ _   _               _         
 %  ___ ___ ___ _ _ __(_)__(_)  __| (_) | |_ ___ __ _ _ (_)__ __ _ 
 % / -_|_-</ -_) '_/ _| |_ / | / _` | | |  _/ -_) _| ' \| / _/ _` |
@@ -30,7 +30,9 @@
 
 articolazioniSestineUpper = \relative c'' {
     \time 2/4
-    \times 2/3 { c16-1[ e-3 d-2 } \override TupletNumber #'transparent = ##t 
+	\override TupletNumber #'transparent = ##t
+	\override TupletBracket.bracket-visibility = ##f
+    \times 2/3 { c16-1[ e-3 d-2 }  
 							\times 2/3 { f-4 e-3 g-5 ] }\times 2/3 { c,[ e d } 		\times 2/3 { f e g] }
     \times 2/3 { d[ f e } 	\times 2/3 { g f a ] }		\times 2/3 { d,[ f e } 		\times 2/3 { g f a ] }
     \times 2/3 { e[ g f } 	\times 2/3 { a g b ] } 		\times 2/3 { e,[ g f } 		\times 2/3 { a g b ] }
@@ -44,7 +46,8 @@ articolazioniSestineUpper = \relative c'' {
 articolazioniSestineLower = \relative c {
     \time 2/4
     \override TupletNumber #'transparent = ##t
-    \times 2/3 { c16-1[ a-3 b-2 } \override TupletNumber #'transparent = ##t 
+	\override TupletBracket.bracket-visibility = ##f
+    \times 2/3 { c16-1[ a-3 b-2 }
 							\times 2/3 { g-4 a-3 f-5 ] }\times 2/3 { c'[ a b } 		\times 2/3 { g a f] }
     \times 2/3 { b[ g a } 	\times 2/3 { f g e ] }		\times 2/3 { b'[ g a } 		\times 2/3 { f g e ] }
     \times 2/3 { a[ f g } 	\times 2/3 { e f d ] } 		\times 2/3 { a'[ f g } 		\times 2/3 { e f d ] }
