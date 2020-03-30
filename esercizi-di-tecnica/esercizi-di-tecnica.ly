@@ -69,7 +69,7 @@
 % ---------------------------------------------  B O O K  ---------------------------------------------------
 % ===========================================================================================================
 \book {
-    \paper { print-all-headers = ##t }
+    \paper { print-all-headers = ##t ragged-bottom = ##t }
 %    \header {
 %        title    = \markup {\larger "Esercizi di Tecnica"}
 %        subtitle = "Articolazioni, Arpeggi, Accordi, Terze"
@@ -78,6 +78,7 @@
 
 	\markup { \vspace #30 }
     \markup \fontsize #10 \bold { "  Esercizi di Tecnica" }
+	\markup { \vspace #1 }
     \markup \fontsize #4 \bold  { "     Articolazioni, Arpeggi, Accordi, Terze" }
 
     \pageBreak
@@ -207,6 +208,7 @@
     \score {
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
 		<<
+		    \override Score.SpacingSpanner.strict-note-spacing = ##t
             \set PianoStaff.instrumentName = \markup { "1.5" }
             \new Staff = "treble" << \clef violin \articolazioniXIIToniUpper >>
             \new Staff = "bass" << \clef bass \articolazioniXIIToniLower >>
@@ -217,11 +219,12 @@
 %			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
 			piece    = \markup { \column { "Articolazioni in chiavi progressive" \null } }
 	    }
-	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 ragged-last = ##t ragged-right = ##t } }
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
     }
 
     % -------------------------------------------------------------------------------------------------------------------
+
 
 	\pageBreak
 
@@ -247,7 +250,9 @@
     }
     % -------------------------------------------------------------------------------------------------------------------
 
+
 	\pageBreak
+
 
     % -------------------------------------------------------------------------------------------------------------------
     %   ACCORDI - MAGGIORI 12 TONI
