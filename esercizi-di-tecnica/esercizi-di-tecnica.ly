@@ -57,6 +57,7 @@
 \include "articolazioni-terzine.ly"
 \include "articolazioni-quartine.ly"
 \include "articolazioni-sestine.ly"
+\include "articolazioni-12-toni.ly"
 
 \include "arpeggi-estesi-maggiori-12-toni.ly"
 
@@ -69,13 +70,17 @@
 % ===========================================================================================================
 \book {
     \paper { print-all-headers = ##t }
-    \header {
-        title    = \markup {\larger "ESERCIZI DI TECNICA"}
-        subtitle = "Articolazioni, Arpeggi, Accordi, Terze"
-        tagline  = ##f
-    }
-	\markup { \vspace #1 }
+%    \header {
+%        title    = \markup {\larger "Esercizi di Tecnica"}
+%        subtitle = "Articolazioni, Arpeggi, Accordi, Terze"
+%        tagline  = ##f
+%    }
 
+	\markup { \vspace #30 }
+    \markup \fontsize #10 \bold { "  Esercizi di Tecnica" }
+    \markup \fontsize #4 \bold  { "     Articolazioni, Arpeggi, Accordi, Terze" }
+
+    \pageBreak
 
     % -------------------------------------------------------------------------------------------------------------------
     %   ARTICOLAZIONI - TERZINE E RELATIVE VARIANTI RITMICHE
@@ -199,6 +204,24 @@
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
     }
 
+    \score {
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+		<<
+            \set PianoStaff.instrumentName = \markup { "1.5" }
+            \new Staff = "treble" << \clef violin \articolazioniXIIToniUpper >>
+            \new Staff = "bass" << \clef bass \articolazioniXIIToniLower >>
+        >>
+		\header {
+            title    = ##f
+			subtitle = ##f
+%			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
+			piece    = \markup { \column { "Articolazioni in chiavi progressive" \null } }
+	    }
+	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
+    }
+
+    % -------------------------------------------------------------------------------------------------------------------
 
 	\pageBreak
 
