@@ -33,8 +33,6 @@
 #(set-global-staff-size 15)
 
 
-%% arpeggi-ottava-maggiori-12-toni.ly [B.1]
-%% arpeggi-estesi-minori-12-toni.ly [B.3]
 %% arpeggi-estesi-sdim-12-toni.ly [B.4]
 
 %% accordi-minori-12-toni.ly [C.2]
@@ -58,7 +56,9 @@
 \include "articolazioni-sestine.ly"
 \include "articolazioni-12-toni.ly"
 
+\include "arpeggi-ottava-maggiori-12-toni.ly"
 \include "arpeggi-estesi-maggiori-12-toni.ly"
+\include "arpeggi-estesi-minori-12-toni.ly"
 
 \include "accordi-maggiori-12-toni.ly"
 \include "accordi-arpeggi-estesi-maggiori-12-toni.ly"
@@ -68,7 +68,7 @@
 % ---------------------------------------------  B O O K  ---------------------------------------------------
 % ===========================================================================================================
 \book {
-    \paper { print-all-headers = ##t ragged-bottom = ##t } % ragged-bottom = ##t
+    \paper { print-all-headers = ##t } % ragged-bottom = ##t
 %    \header {
 %        title    = \markup {\larger "Esercizi di Tecnica"}
 %        subtitle = "Articolazioni, Arpeggi, Accordi, Terze"
@@ -226,16 +226,37 @@
 
 
     % -------------------------------------------------------------------------------------------------------------------
+    %   ARPEGGGI - MAGGIORI SULL'OTTAVA 12 TONI
+    % -------------------------------------------------------------------------------------------------------------------
+	\score {
+        \new Staff = "treble" \with { midiInstrument = #"acoustic grand" }
+		 <<
+            \set PianoStaff.instrumentName = \markup { "2.1" }
+            \clef violin \relative c'' \arpeggiOttavaMaggioriXIIToni
+        >>
+		\header {
+            title    = "2 ARPEGGI"
+			subtitle = ##f
+%			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
+			piece    = \markup { \column { "Arpeggi maggiori sull'ottava in chiavi progressive" \null } }
+	    }
+	    \layout { \context { \override VerticalAlignment #'forced-distance = #4 } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
+    }
+
+	\pageBreak
+
+    % -------------------------------------------------------------------------------------------------------------------
     %   ARPEGGGI - MAGGIORI 12 TONI
     % -------------------------------------------------------------------------------------------------------------------
 	\score {
         \new Staff = "treble" \with { \remove "Time_signature_engraver" midiInstrument = #"acoustic grand" }
 		 <<
-            \set PianoStaff.instrumentName = \markup { "2.1" }
+            \set PianoStaff.instrumentName = \markup { "2.3" }
             \clef violin \relative c' \arpeggiMaggioriXIIToni
         >>
 		\header {
-            title    = "2 ARPEGGI"
+            title    = ##f
 			subtitle = ##f
 %			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
 			piece    = \markup { \column { "Arpeggi maggiori in chiavi progressive" \null } }
@@ -246,8 +267,8 @@
     \score {
         \new Staff = "treble" \with { \remove "Time_signature_engraver" midiInstrument = #"acoustic grand" }
 		 <<
-            \set PianoStaff.instrumentName = \markup { "2.2" }
-            \clef violin \relative c' \arpeggiMaggioriXIIToni
+            \set PianoStaff.instrumentName = \markup { "2.4" }
+            \clef violin \relative c' \arpeggiMinoriXIIToni
         >>
 		\header {
             title    = ##f

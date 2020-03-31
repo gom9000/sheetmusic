@@ -53,7 +53,9 @@ variantiRitmicheSestine = \relative c' {
     \stopStaff
     \skip 1
 	\cadenzaOff
-	\break
+
+%	\break
+
 	\cadenzaOn
     \startStaff
         c8[ c16 c16 c16 c16 c16]
