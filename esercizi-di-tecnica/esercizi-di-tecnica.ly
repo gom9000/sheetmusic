@@ -32,7 +32,6 @@
 #(ly:set-option 'delete-intermediate-files #t)
 #(set-global-staff-size 15)
 
-%% articolazioni-12-toni.ly [A.5]   -- vitale
 
 %% arpeggi-ottava-maggiori-12-toni.ly [B.1]
 %% arpeggi-estesi-minori-12-toni.ly [B.3]
@@ -69,7 +68,7 @@
 % ---------------------------------------------  B O O K  ---------------------------------------------------
 % ===========================================================================================================
 \book {
-    \paper { print-all-headers = ##t ragged-bottom = ##t }
+    \paper { print-all-headers = ##t  } % ragged-bottom = ##t
 %    \header {
 %        title    = \markup {\larger "Esercizi di Tecnica"}
 %        subtitle = "Articolazioni, Arpeggi, Accordi, Terze"
@@ -208,7 +207,6 @@
     \score {
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
 		<<
-		    \override Score.SpacingSpanner.strict-note-spacing = ##t
             \set PianoStaff.instrumentName = \markup { "1.5" }
             \new Staff = "treble" << \clef violin \articolazioniXIIToniUpper >>
             \new Staff = "bass" << \clef bass \articolazioniXIIToniLower >>
@@ -219,7 +217,7 @@
 %			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
 			piece    = \markup { \column { "Articolazioni in chiavi progressive" \null } }
 	    }
-	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 ragged-last = ##t ragged-right = ##t } }
+	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
     }
 
