@@ -62,6 +62,7 @@ articolazioniXIIToniUpper = \relative c' {
     \break
 	\tuplet 9/4 { cis[ dis e dis cis dis e dis cis] }
 	\tuplet 9/4 { dis[ e fis e dis e fis e dis] }
+	\skip 2
 }
 articolazioniXIIToniLower = \relative c' {
     \time 4/4
@@ -97,4 +98,5 @@ articolazioniXIIToniLower = \relative c' {
     \break
 	\tuplet 9/4 { gis[ fis e fis gis fis e fis gis] }
 	\tuplet 9/4 { fis[ e dis e fis e dis e fis] ^\markup { \raise #2 {  "   continua fino al DO successivo" }} }
+	\skip 2
 }

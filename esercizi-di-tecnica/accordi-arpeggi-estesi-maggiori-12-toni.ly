@@ -5,6 +5,7 @@
 % -----------------------------------------------------------------------------------------------------------------------
 accordiArpeggiEstesiMaggioriXIIToni = {
     \time 4/4
+	\set fontSize = #-1
 
 	\key c \major
 	<c e g c>4				<e g c e>4				<g c e g>4				<c e g c>4

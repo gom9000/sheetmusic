@@ -5,8 +5,8 @@
 % -----------------------------------------------------------------------------------------------------------------------
 arpeggiMaggioriXIIToni = {
     \cadenzaOn
-
-	\key c \major		c,16[ e g c]			e[ g c e] 				g[ c e g]			c[ g e c]			g[ e c g]			e[ c g e]			\bar "|"
+    \set fontSize = #-2
+	\key c \major		c,16[ ^\markup { \small {  "la sinistra 1 ottava sotto" }} e g c]			e[ g c e] 				g[ c e g]			c[ g e c]			g[ e c g]			e[ c g e]			\bar "|"
 	\key cis \major		cis[ eis gis cis]		eis[ gis cis eis] 		gis[ cis eis gis]	cis[ gis eis cis]	gis[ eis cis gis]	eis[ cis gis eis]	\bar "|"
 	\key d \major		d[ fis a d]				fis[ a d fis]			a[ d fis a]			d[ a fis d]			a[ fis d a] 		fis[ d a fis]		\bar "|"
 	\key ees \major		ees[ g bes ees]			g[ bes ees g]			bes[ ees g bes]		ees[ bes g ees]		bes[ g ees bes]		g[ ees bes g]		\bar "|"
@@ -18,9 +18,6 @@ arpeggiMaggioriXIIToni = {
 	\key a \major		a[ cis e a]				cis[ e a cis]			e[ a cis e]			a[ e cis a]			e[ cis a e]			cis[ a e cis]		\bar "|"
 	\key bes \major		bes[ d f bes]			d[ f bes d]				f[ bes d f]			bes[ f d bes]		f[ d bes f]			d[ bes f d]			\bar "|"
 	\key b \major		b[ dis fis b]			dis[ fis b dis]			fis[ b dis fis]		b [fis dis b]		fis[ dis b fis]		dis[ b fis dis]		\bar "|"
-
-    \bar "||"
-
     \cadenzaOff
     \bar "|."
 }

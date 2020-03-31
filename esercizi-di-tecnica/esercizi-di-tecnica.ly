@@ -68,7 +68,7 @@
 % ---------------------------------------------  B O O K  ---------------------------------------------------
 % ===========================================================================================================
 \book {
-    \paper { print-all-headers = ##t  } % ragged-bottom = ##t
+    \paper { print-all-headers = ##t ragged-bottom = ##t } % ragged-bottom = ##t
 %    \header {
 %        title    = \markup {\larger "Esercizi di Tecnica"}
 %        subtitle = "Articolazioni, Arpeggi, Accordi, Terze"
@@ -203,7 +203,6 @@
 	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
     }
-
     \score {
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
 		<<
@@ -220,7 +219,6 @@
 	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
     }
-
     % -------------------------------------------------------------------------------------------------------------------
 
 
@@ -231,11 +229,10 @@
     %   ARPEGGGI - MAGGIORI 12 TONI
     % -------------------------------------------------------------------------------------------------------------------
 	\score {
-        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+        \new Staff = "treble" \with { \remove "Time_signature_engraver" midiInstrument = #"acoustic grand" }
 		 <<
             \set PianoStaff.instrumentName = \markup { "2.1" }
-            \new Staff = "treble" << \clef violin \relative c' \arpeggiMaggioriXIIToni >>
-            \new Staff = "bass" << \clef bass \relative c \arpeggiMaggioriXIIToni >>
+            \clef violin \relative c' \arpeggiMaggioriXIIToni
         >>
 		\header {
             title    = "2 ARPEGGI"
@@ -243,7 +240,22 @@
 %			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
 			piece    = \markup { \column { "Arpeggi maggiori in chiavi progressive" \null } }
 	    }
-	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+	    \layout { \context { \override VerticalAlignment #'forced-distance = #4 } }
+	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
+    }
+    \score {
+        \new Staff = "treble" \with { \remove "Time_signature_engraver" midiInstrument = #"acoustic grand" }
+		 <<
+            \set PianoStaff.instrumentName = \markup { "2.2" }
+            \clef violin \relative c' \arpeggiMaggioriXIIToni
+        >>
+		\header {
+            title    = ##f
+			subtitle = ##f
+%			opus     = \markup { \bold \smaller { (\note #"4"#1 = 120) } }
+			piece    = \markup { \column { "Arpeggi minori in chiavi progressive" \null } }
+	    }
+	    \layout { \context { \override VerticalAlignment #'forced-distance = #6 } }
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
     }
     % -------------------------------------------------------------------------------------------------------------------
