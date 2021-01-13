@@ -1,0 +1,58 @@
+http://lilypond.org/doc/v2.19/Documentation/snippets-big-page
+
+
+\compoundMeter #'((2 8) (3 8))
+
+
+<< \musicUp \\ \musicDown >>
+
+
+\new Staff \with {
+    fontSize = #-3
+    \override StaffSymbol.staff-space = #(magstep -3)
+  }
+
+
+\override TupletBracket.bracket-visibility = #'if-no-beam
+    << \music s4^"'if-no-beam" >>
+
+
+\relative c' {
+  \tempo \markup {
+    \concat {
+      (
+      \smaller \general-align #Y #DOWN \note #"16." #1
+      " = "
+      \smaller \general-align #Y #DOWN \note #"8" #1
+      )
+    }
+  }
+  c1
+  c4 c' c,2
+}
+
+
+\relative c' {
+  \set tieWaitForNote = ##t
+  \grace { c16[ ~ e ~ g] ~ } <c, e g>2
+  \repeat tremolo 8 { c32 ~ c' ~ } <c c,>1
+  e8 ~ c ~ a ~ f ~ <e' c a f>2
+  \tieUp
+  c8 ~ a
+  \tieDown
+  \tieDotted
+  g8 ~ c g2
+}
+
+
+\new Staff \with {
+  \consists "Span_arpeggio_engraver"
+}
+\relative c' {
+  \set Staff.connectArpeggios = ##t
+  <<
+    { <e' g>4\arpeggio <d f> <d f>2 }
+    \\
+    { <d, f>2\arpeggio <g b>2 }
+  >>
+}
