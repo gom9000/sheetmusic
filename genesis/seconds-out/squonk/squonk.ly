@@ -80,13 +80,13 @@ hammondLowerTemaA = \relative c' {
 	<d f a c>2~				<d f a c>4.		<d e g c>8~
 	<d e g c>1
 
-	<d f a c>2~				<d f a c>4.		<d f a c>8~
+	<d f a c>2~				<d f a c>4.		<d e g c>8~
 	<d e g c>1
 
-	<d f a c>2~				<d f a c>4.		<d f a c>8~
+	<d f a c>2~				<d f a c>4.		<d e g c>8~
 	<d e g c>1
 
-	<d f a c>2~				<d f a c>4.		<d f a c>8~
+	<d f a c>2~				<d f a c>4.		<d e g c>8~
 	<d e g c>1
 }
 % -----------------------------------------------------------------------------------------------------------
@@ -178,153 +178,153 @@ hammondLowerRitornelloAltTwoVarB = \relative c'' {
 
 RMIUpperRitornelloAltTwoVarB = \relative c'' {
 	r2
-	r4.				<b dis fis>8~
+	r4.				<dis, fis b>8~
 }
 RMILowerRitornelloAltTwoVarB = \relative c {
 	r2
-	r4.				b8~
+	r4.				<b b,>8~
 }
 % -----------------------------------------------------------------------------------------------------------
 % --  BRIDGE  -----------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
 hammondUpperPonteA = \relative c'' {
-	<g bes d>4. <g bes e>4.   <g bes d>8 <g bes e>8
+	<g bes d>4 <g bes e>4   <g bes d>8 <g bes e>8
 }
 hammondUpperPonteB = \relative c'' {
-	<a d e>4. <a d f>4.   <a d e>8 <a d f>8
-	<bes d f>4. <bes d g>4.   <bes d f>8 <bes d g>8
-	<c e g>4. <c d f a>4. r4
+	<a d e>4. <a d f>8~ <a d f>4   <a d e>8 <a d f>8
+	<bes d f>4. <bes d g>8~ <bes d g>4   <bes d f>8 <bes d g>8
+	<c e g>4. <c d f a>8~ <c d f a>4 r4
 }
 hammondLowerPonteA = \relative c'' {
-	<g bes d>4.~ <g bes e>8~ <g bes e>2
+	<g bes d>4~ <g bes e>2
 }
 hammondLowerPonteB = \relative c'' {
 	<a d e>4.~ <a d f>8~ <a d f>2
 	<bes d f>4. <bes d g>8~ <bes d g>2
-	<c e g>4.~ <c d f a>4. r4
+	<c e g>4.~ <c d f a>8~ <c d f a>4 r4
 }
 % -----------------------------------------------------------------------------------------------------------
 % --  TEMA-C  -----------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
-RMIUpperTemaCOne = \relative c'' {
-	<a c f>2
+RMIUpperTemaCOne = \relative c' {
+	<a c>8~ <f a c>~ <f a c f>4
 }
-RMIUpperTemaCTwo = \relative c'' {
-	<c e g>4~   <e g c>4
-	<f a d>2~		
-	<f a d>2
+RMIUpperTemaCTwo = \relative c' {
+	<e g>8~ <c e g>~  <c e g c>4
+	<g' a d>4.~ <d f a d>8~	
+	<d f a d>2
 
-	<ees g bes>2
-	<g bes ees>2
+	<ees g bes>4. <g bes ees g>8~
+	<g bes ees g>2
 
-	<f bes d>2
-	<f a c>4~	<c f a>4
+	<f bes>4~ <d f bes>4
+	<a c>8~ <f a c>~ <f a c f>4
 }
-RMIUpperTemaCThree = \relative c'' {
-	<c e g>4~ <e g c>4
+RMIUpperTemaCThree = \relative c' {
+	<e g>8~ <c e g>~  <c e g c>4
 }
 RMILowerTemaCOne = \relative c {
-	f2
+	f,2
 }
 RMILowerTemaCTwo = \relative c {
-	a2
-	d,2~
-	d2
+	<a a,>2
+	<d d,>2~
+	<d d,>
 
-	ees2~
-	ees2
+	<ees ees,>2~
+	<ees ees,>2
 
-	d2
+	<bes bes,>2
 	f2
 }
 RMILowerTemaCThree = \relative c {
-	a2
+	<a a,>2
 }
 % -----------------------------------------------------------------------------------------------------------
 % --  BRIDGE-CODA  ------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
-RMIUpperPonteCoda = \relative c'' {
-	<b dis fis>1
+RMIUpperPonteCoda = \relative c' {
+	<dis fis b>1
 	<cis fis a>1
 	<cis e a>1
 }
-RMIUpperPonteCodaRitA = \relative c'' {
+RMIUpperPonteCodaRitA = \relative c' {
 	<b e gis>1
 }
-RMIUpperPonteCodaRitB = \relative c'' {
+RMIUpperPonteCodaRitB = \relative c' {
 	<b e gis>2		<b dis fis>2
 }
 RMILowerPonteCoda = \relative c {
-	b1
-	fis1
-	a1
+	<b b,>1
+	<fis fis,>1
+	<a a,>1
 }
 RMILowerPonteCodaRitA = \relative c {
-	e,1
+	<e e,>1
 }
 RMILowerPonteCodaRitB = \relative c {
-	b2  b2
+	<b b,>2 <b b,>2
 }
 % -----------------------------------------------------------------------------------------------------------
 % --  CODA  -------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
-RMIUpperCoda = \relative c'' {
+RMIUpperCoda = \relative c' {
 	<gis b e>4	<b e gis>4	<e gis b>4	<gis b e>4
 	<b e gis>1
 
 	<gis, b e>4	<b e gis>4	<e gis b>4	<gis b e>4
-	<b e gis>4	<e gis b>4	<fis a cis>2
-	<dis fis b>1
+	<b e gis>4	<e gis b>4	<e a cis>2
+	<dis fis cis'>1
 	
 	<gis,, b e>4	<fis b dis>4	<e a cis>4	<fis b dis>4
 	<gis b e>4  <ais cis fis>4	<fis b dis>2
 	
 	<gis' b e>4	<fis b dis>4	<e a cis>4 <e gis b>4
 	<cis fis a>4 <b e gis>4 	<bes ees g>4	<c ees aes>4
-	<gis b cis dis>2	<fis a cis dis>2
-	<gis b cis dis>2	<fis a cis dis>2
+	<gis b dis>2	<fis a dis>2
+	<gis b dis>2	<fis a dis>2
 	
-	<gis cis eis>4	<cis eis gis>4	<eis gis cis>4	<gis cis eis>4
-	<cis eis gis>1
+	<eis gis cis>4 <gis cis eis>	<cis eis gis>4	<eis gis cis>4
+	<gis cis eis>1
 	
-	<gis, cis eis>4	<cis eis gis>4	<eis gis cis>4	<gis cis eis>4
-	<cis eis gis>4	<eis gis cis>4	<fis ais dis>2
-	<dis gis bis>1
+	<eis, gis cis>4 <gis cis eis>	<cis eis gis>4	<eis gis cis>4
+	<gis cis eis>	<cis eis gis>4	<cis fis ais>2
+	<c fis ais>1
 	
 	<gis, cis eis>8 <gis cis fis>8 <gis cis eis>8 <aes c ees>8~
 	<aes c ees>8 <c ees aes>8 <aes c ees>8 <fis ais cis>8~
 	<fis ais cis>8 <ais cis fis>8 <fis ais cis>8 <aes c ees>8~
-	<aes c ees>8 <c ees aes>8 <aes c ees>8 <gis cis eis>8~
-	<gis cis eis gis>1\fermata
+	<aes c ees>8 <c ees aes>8 <aes c ees>4
+	<aes c ees ges aes>2 <aes' c ees ges aes>2
+	<gis, cis eis gis>2 <gis' cis eis gis>\fermata
 }
-RMILowerCoda = \relative c' {
-	e4 dis cis b
-	a1
+RMILowerCoda = \relative c {
+	<e e,>4 <dis dis,> <cis cis,> <b b,>
+	<a a,>1
 
-	e'4 dis cis b
-	a4 gis fis2
-	b1
+	<e' e,>4 <dis dis,> <cis cis,> <b b,>
+	<a a,> <gis gis,> <fis fis,>2
+	<b b,>1
 
-	cis4 b a b
-	gis4 fis b2
+	<cis' cis,>4 <b b,> <a a,> <gis gis,>
+	<fis fis,> <fis fis,> <b b,>2
 
-	cis4 b a gis
-	fis4 e dis c
-	gis'2	fis2
-	gis2	fis2
+	<cis cis,>4 <b b,> <a a,> <gis gis,>
+	<fis fis,> <e e,> <dis dis,> <dis dis,>
+	<b b,>2	<a a,>2
+	<gis gis,>2	<fis fis,>2
 
-	cis'4 bis ais gis
-	fis1
+	<cis' cis,>4 <bis bis,> <ais ais,> <gis gis,>
+	<fis fis,>1
 
-	cis'4 bis ais gis
-    fis4 eis fis2
-	gis1
+	<cis' cis,>4 <bis bis,> <ais ais,> <gis gis,>
+    <fis fis,>4 <eis eis,> <dis dis,>2
+	<gis gis,>1
 
-	cis8^\markup { \italic rit. } cis cis gis~
-	gis8 gis gis fis~
-	fis8 fis fis gis~
-	gis8 gis gis cis~
-	cis1\fermata
+	<cis cis,>4.^\markup { \italic rit. } <gis gis,>8~ <gis gis,>4. <fis fis,>8~
+	<fis fis,>4. <gis gis,>8~ <gis gis,>2
+	<cis cis,>1
+	<cis cis,>\fermata
 }
 % ===========================================================================================================
 % --------------------------------------------  B U I L D  --------------------------------------------------
@@ -358,15 +358,15 @@ prosoloistPart = {
     }
 
 	% PONTE
-%	\time 3/4
-	r1
-%	\time 4/4
-	r1 r1 r1
+	\time 3/4
+	r2.
+	\time 2/4
+	r2 r2 r2 r2 r2 r2
 
 	\break
 
 	% TEMA-C
-	\time 2/4
+%	\time 2/4
 	r2
     \repeat volta 2 {
 		r2 r2 r2 r2	r2 r2 r2
@@ -376,7 +376,7 @@ prosoloistPart = {
 	\break
 
 	% RITORNELLO
-	\time 2/4
+%	\time 2/4
 	\repeat volta 2 {
 		r2 r2 r2 r2 r2 r2
     } \alternative {
@@ -408,15 +408,15 @@ prosoloistPart = {
 	\break
 
 	% 2 PONTE
-%	\time 3/4
-	r1
-%	\time 4/4
-	r1 r1 r1
+	\time 3/4
+	r2.
+	\time 2/4
+	r2 r2 r2 r2 r2 r2
 
 	\break
 
 	% 2 TEMA-C
-	\time 2/4
+%	\time 2/4
 	r2
     \repeat volta 2 {
 		r2 r2 r2 r2	r2 r2 r2
@@ -426,7 +426,7 @@ prosoloistPart = {
 	\break
 
 	% RITORNELLO FINALE
-	\time 2/4
+%	\time 2/4
 	\repeat volta 2 {
 		r2 r2 r2 r2 r2 r2
     } \alternative {
@@ -481,15 +481,15 @@ hammondUpperPart = {
     }
 
 	% PONTE
-%	\time 3/4
+	\time 3/4
 	\hammondUpperPonteA
-%	\time 4/4
+	\time 2/4
 	\hammondUpperPonteB
 
 	\break
 
 	% TEMA-C
-	\time 2/4
+%	\time 2/4
 	r2
     \repeat volta 2 {
 		r2 r2 r2 r2	r2 r2 r2
@@ -499,7 +499,7 @@ hammondUpperPart = {
 	\break
 
 	% RITORNELLO
-	\time 2/4
+%	\time 2/4
 	\repeat volta 2 {
 		\hammondUpperRitornelloA
     } \alternative {
@@ -528,15 +528,15 @@ hammondUpperPart = {
 	\break
 
 	% 2 PONTE
-%	\time 3/4
+	\time 3/4
 	\hammondUpperPonteA
-%	\time 4/4
+	\time 2/4
 	\hammondUpperPonteB
 
 	\break
 
 	% 2 TEMA-C
-	\time 2/4
+%	\time 2/4
 	r2
     \repeat volta 2 {
 		r2 r2 r2 r2	r2 r2 r2
@@ -546,7 +546,7 @@ hammondUpperPart = {
 	\break
 
 	% RITORNELLO FINALE
-	\time 2/4
+%	\time 2/4
 	\repeat volta 2 {
 		\hammondUpperRitornelloA
     } \alternative {
@@ -602,15 +602,15 @@ hammondLowerPart = {
     }
 
 	% PONTE
-%	\time 3/4
+	\time 3/4
 	\hammondLowerPonteA
-%	\time 4/4
+	\time 2/4
 	\hammondLowerPonteB
 
 	\break
 
 	% TEMA-C
-	\time 2/4
+%	\time 2/4
 	r2
     \repeat volta 2 {
 		r2 r2 r2 r2	r2 r2 r2
@@ -620,7 +620,7 @@ hammondLowerPart = {
 	\break
 
 	% RITORNELLO
-	\time 2/4
+%	\time 2/4
 	\repeat volta 2 {
 		\hammondLowerRitornelloA
     } \alternative {
@@ -649,15 +649,15 @@ hammondLowerPart = {
 	\break
 
 	% 2 PONTE
-%	\time 3/4
+	\time 3/4
 	\hammondLowerPonteA
-%	\time 4/4
+	\time 2/4
 	\hammondLowerPonteB
 
 	\break
 
 	% 2 TEMA-C
-	\time 2/4
+%	\time 2/4
 	r2
     \repeat volta 2 {
 		r2 r2 r2 r2	r2 r2 r2
@@ -667,7 +667,7 @@ hammondLowerPart = {
 	\break
 
 	% RITORNELLO FINALE
-	\time 2/4
+%	\time 2/4
 	\repeat volta 2 {
 		\hammondLowerRitornelloA
     } \alternative {
@@ -721,15 +721,15 @@ RMIUpperPart = {
     }
 
 	% PONTE
-%	\time 3/4
-	r1
-%	\time 4/4
-	r1 r1 r1
+	\time 3/4
+	r2.
+	\time 2/4
+	r2 r2 r2 r2 r2 r2
 
 	\break
 
 	% TEMA-C
-	\time 2/4
+%	\time 2/4
 	\RMIUpperTemaCOne
     \repeat volta 2 {
 		\RMIUpperTemaCTwo
@@ -739,7 +739,7 @@ RMIUpperPart = {
 	\break
 
 	% RITORNELLO
-	\time 2/4
+%	\time 2/4
 	\repeat volta 2 {
 		r2 r2 r2 r2 r2 r2
     } \alternative {
@@ -768,15 +768,15 @@ RMIUpperPart = {
 	\break
 
 	% 2 PONTE
-%	\time 3/4
-	r1
-%	\time 4/4
-	r1 r1 r1
+	\time 3/4
+	r2.
+	\time 2/4
+	r2 r2 r2 r2 r2 r2
 
 	\break
 
 	% 2 TEMA-C
-	\time 2/4
+%	\time 2/4
 	\RMIUpperTemaCOne
     \repeat volta 2 {
 		\RMIUpperTemaCTwo
@@ -786,7 +786,7 @@ RMIUpperPart = {
 	\break
 
 	% RITORNELLO FINALE
-	\time 2/4
+%	\time 2/4
 	\repeat volta 2 {
 		r2 r2 r2 r2 r2 r2
     } \alternative {
@@ -841,15 +841,15 @@ RMILowerPart = {
     }
 
 	% PONTE
-%	\time 3/4
-	r1
-%	\time 4/4
-	r1 r1 r1
+	\time 3/4
+	r2.
+	\time 2/4
+	r2 r2 r2 r2 r2 r2
 
 	\break
 
 	% TEMA-C
-	\time 2/4
+%	\time 2/4
 	\RMILowerTemaCOne
     \repeat volta 2 {
 		\RMILowerTemaCTwo
@@ -859,7 +859,7 @@ RMILowerPart = {
 	\break
 
 	% RITORNELLO
-	\time 2/4
+%	\time 2/4
 	\repeat volta 2 {
 		r2 r2 r2 r2 r2 r2
     } \alternative {
@@ -888,15 +888,15 @@ RMILowerPart = {
 	\break
 
 	% PONTE
-%	\time 3/4
-	r1
-%	\time 4/4
-	r1 r1 r1
+	\time 3/4
+	r2.
+	\time 2/4
+	r2 r2 r2 r2 r2 r2
 
 	\break
 
 	% TEMA-C
-	\time 2/4
+%	\time 2/4
 	\RMILowerTemaCOne
     \repeat volta 2 {
 		\RMILowerTemaCTwo
@@ -906,7 +906,7 @@ RMILowerPart = {
 	\break
 
 	% RITORNELLO
-	\time 2/4
+%	\time 2/4
 	\repeat volta 2 {
 		r2 r2 r2 r2 r2 r2
     } \alternative {
@@ -968,7 +968,7 @@ RMILowerPart = {
 	            \new Staff = lower \hammondLowerPart
             >>
 
-            \new PianoStaff = "RMI" \with {midiInstrument = #"rock organ" }
+            \new PianoStaff = "RMI" \with {midiInstrument = #"electric piano 1" }
 		    <<
                 \set PianoStaff.instrumentName = "RMI"
 	            \new Staff = upper \RMIUpperPart
